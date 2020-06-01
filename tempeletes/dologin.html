@@ -1,19 +1,58 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Login Here</h1>
-    <form class="" action="log" method="POST">
-      {% csrf_token %}
-      <label for="">Username</label>
-      <input type="text" name="username" value="">
-      <label for="">Password</label>
-      <input type="password" name="password" value="">
-      <input type="submit" name="" value="Login">
+<html lang="en" dir="ltr">
+
+  <head>
+
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700&display=swap" rel="stylesheet"/>
+    <title>
+    </title>
+
+  </head>
+
+<br><br><br><br>
+<br>
+  <h2 align=center>LOGIN </h2><br>
+    <h3 align=center>
+      <form class="" action="log" method="POST">
+
+      {% csrf_token %}<br>
+      <table align=center style="text-align:left" class="tg" style="undefined;table-layout: fixed">
+      <colgroup>
+      <col style="width: 260px">
+      <col style="width: 278px">
+      </colgroup>
+      <thead>
+      <tr>
+        <th class="tg-0pky"><label for="" >Username:</label></th>
+        <th class="tg-0pky"><input style="width:250px" type="text" name="username" value=""></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="tg-0pky"><label for="" >Password:</label></td>
+        <td class="tg-0pky"><input style="width:250px" type="password" name="password" value=""></td>
+      </tr>
+      </tbody>
+      </table>
 
 
-    </form>
+        <br><br>
+        <input type="submit" name="" value="submit">
 
-    {% for message in messages %}
-    <h1>{{message}}</h1>
-    {% endfor %}
 
-{% endblock %}
+        <br>
+
+      </form>
+
+      {% for message in messages %}
+      <h3 align=center >
+        {{message}}<br>
+        {% endfor %}<br>
+
+       {% endblock %}<br>
+      </h3>
+    </h3>
+</html>

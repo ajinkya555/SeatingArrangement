@@ -1,3 +1,5 @@
+
+
 <style type="text/css">
 
 table {
@@ -19,18 +21,26 @@ table, th, td {
 </script>
 {% extends 'base.html' %}
 {% block content %}
+<div class="logout">
+          <form class="" action="logout" method="post">
+            <br>
+            {% csrf_token %}
+          <input type="submit" name="" value="Logout">
+          </form>
+</div>
 
-​<button onclick="printc('div1')">Print</button>
+​
 <div id="div1">
+  <br><br><br>
 Department: {{dep}}
+<br><br>
+Subjects:<br><br>
+SE: {{sub1}}<br><br>
+TE: {{sub2}}<br><br>
+BE: {{sub3}}<br>
+<br><br><br><br><br>
 <br>
-Subjects:<br>
-SE: {{sub1}}<br>
-TE: {{sub2}}<br>
-BE: {{sub3}}
-
-<br>
-<table class="tg">
+<table class="tg" align=center style="text-align:center" >
   <colgroup>
   <col style="width: 400px">
   <col style="width: 250px">
@@ -127,10 +137,10 @@ BE: {{sub3}}
     <td class="tg-0lax">{{bb1}}</td>
   </tr>
 </table>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
 
-<br><br>
-
-<table class="tg" style="undefined;table-layout: fixed; width: 551px">
+<table align=center style="text-align:center" class="tg" style="undefined;table-layout: fixed; width: 551px">
 <colgroup>
 <col style="width: 400px">
 <col style="width: 151px">
@@ -206,8 +216,9 @@ BE: {{sub3}}
 
 <br>
 </div>
-<form class="" action="logout" method="post">
-  {% csrf_token %}
-  <input type="submit" name="" value="Logout">
-</form>
+<h2 align="center">
+<button onclick="printc('div1')">Print</button>
+</h2>
 {% endblock %}
+
+</html>

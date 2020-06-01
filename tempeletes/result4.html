@@ -1,3 +1,5 @@
+
+
 <style type="text/css">
 
 table {
@@ -19,8 +21,14 @@ table, th, td {
 </script>
 {% extends 'base.html' %}
 {% block content %}
-
-​<button onclick="printc('div1')">Print</button>
+<div class="logout">
+  <form class="" action="logout" method="post">
+    <br>
+      {% csrf_token %}
+    <input type="submit" name="" value="Logout">
+  </form>
+</div>
+​
 <div id="div1">
 Department: {{dep}}
 <br>
@@ -29,7 +37,7 @@ TE: {{sub2}}<br>
 BE: {{sub3}}
 
 <br>
-<table class="tg">
+<table class="tg" align=center style="text-align:center">
   <colgroup>
   <col style="width: 400px">
   <col style="width: 250px">
@@ -102,7 +110,7 @@ BE: {{sub3}}
 
 <br><br>
 
-<table class="tg" style="undefined;table-layout: fixed; width: 551px">
+<table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed; width: 551px">
 <colgroup>
 <col style="width: 400px">
 <col style="width: 151px">
@@ -156,9 +164,9 @@ BE: {{sub3}}
 </table>
 </div>
 <br>
+<h2 align="center">
+  <button onclick="printc('div1')">Print</button>
+</h2>
 
-<form class="" action="logout" method="post">
-  {% csrf_token %}
-  <input type="submit" name="" value="Logout">
-</form>
+
 {% endblock %}

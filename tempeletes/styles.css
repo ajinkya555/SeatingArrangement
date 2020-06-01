@@ -1,20 +1,93 @@
 body,button,input{
-  font-family: 'Oswald', sans-serif;
+
+font-family: 'Oswald', sans-serif;
+
 }
-nav {
-  background-color: orange;
+
+
+
+h1{
+  background-color: blue;
+  width:1120px;
+  height:60px;
+  padding:10px 10px;
 }
-nav ul {
-  margin: 0;
+span{
+
+  text-decoration: double underline;
+
 }
-nav li {
-  display: inline-block;
+
+.header{
+  float:left;
+  background-color:aqua;
+  width:1415px;
 }
-nav li a {
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 4000;
-  text-decoration: none;
-  color: black;
-  padding: 16px 38px;
+
+.logo1{
+    float:left;
+    height:80px;
+    width:80px;
+    margin:15px;
+}
+
+.clg{
+   float:left;
+   width:550px;
+}
+
+.logo2{
+   height:80;
+   width:80;
+   float:right;
+   margin:15px;
+}
+
+.list{
+background-color:lightgrey;
+clear:both;
+padding:10px 10px;
+height:90px;
+
+}
+
+.list ul li{
+float:left;
+padding:30px 30px;
+height:10px;
+}
+
+
+
+
+.middle{
+  float:left;
+  width:1180px;
+  clear:both;
+}
+
+.rightside{
+   float:left;
+   height:500px;
+   padding:10px 10px;
+   border-color:black;
+   border-left:solid;
+   border-width:3px;
+}
+.footer{
+clear:both;
+}
+
+.details_set1 label{
+  float:left;
+  width:90px;
+}
+.details_set2 label{
+  float:left;
+  width:90px;
+}
+
+.logout{
+  float:right;
+  clear:both;
 }

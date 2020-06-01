@@ -1,28 +1,54 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Register Here</h1>
-    <form class="" action="areg" method="POST" >
-      {% csrf_token %}
-      <label for="">Firstname</label>
-      <input type="text" name="first_name" value="" required><br>
-      <label for="">Lastname</label>
-      <input type="text" name="last_name" value="" required><br>
-      <label for="">Username</label>
-      <input type="text" name="username" value="" required><br>
-      <label for="">E-mail</label>
-      <input type="email" name="email" value="" required><br>
-      <label for="">Password</label>
-      <input type="password" name="password1" value="" required><br>
-      <label for="">Confirm Password</label>
-      <input type="password" name="password2" value="" required><br>
-      <input type="submit" name="" value="Register">
+<br><br>
+<br><br>
+<br><br>
+    <h2 align=center>Register </h2><br>
+    <h3 align=center>
+      <form class="" action="areg" method="POST" >
+        {% csrf_token %}<br>
+
+<table align=center style="text-align:left" class="tg" style="undefined;table-layout: fixed">
+<colgroup>
+<col style="width: 260px">
+<col style="width: 278px">
+</colgroup>
+<thead>
+  <tr>
+    <th class="tg-0pky"><label for="">Firstname:</label></th>
+    <th class="tg-0pky"><input style="width:250px" type="text" name="first_name" value="" required></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky"><label  for="">Lastname:</label></td>
+    <td class="tg-0pky"><input style="width:250px"  type="text" name="last_name" value="" required></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><label  for="">Username:</label></td>
+    <td class="tg-0pky"><input style="width:250px"  type="text" name="username" value="" required></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><label  for="">E-mail:</label></td>
+    <td class="tg-0pky"><input style="width:250px"  type="email" name="email" value="" required></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><label  for="">Password:</label></td>
+    <td class="tg-0pky"><input style="width:250px"  type="password" name="password1" value="" required></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><label  for="">Confirm Password:</label></td>
+    <td class="tg-0pky"><input style="width:250px"  type="password" name="password2" value="" required></td>
+  </tr>
+</tbody>
+</table>
 
 
-    </form>
-    {% for message in messages %}
-    <h1>{{message}}</h1>
-    {% endfor %}
+        <br>
+        <input  type="submit" name="" value="Register">
+      </form>
+        {% for message in messages %}
+        <h3 align=center>{{message}}<br>
+        {% endfor %}<br>
 
-
-
-{% endblock %}
+        {% endblock %}

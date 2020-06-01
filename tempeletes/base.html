@@ -1,25 +1,186 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700&display=swap" rel="stylesheet">
-    <title></title>
-  </head>
-  <body bgcolor="cyan">
-    <nav>
-    <ul>
-      <li><a href="{% static 'home.html'%}">Home</a></li>
-      <li><a href="{% static 'records.html' %}">View Previous Records</a></li>
-      <li><a href="{% static 'mission.html' %}">Mission</a></li>
-      <li><a href="{% static 'vision.html' %}">Vision</a></li>
-      <li><a href="{% static 'aboutus.html' %}">About Us</a></li>
-    </ul>
-    </nav>
-    <h1>Welcome</h1>
-    {% block content %}
 
-    {% endblock %}
-  </body>
+<html lang="en" dir="ltr">
+
+<head>
+  <style media="screen">
+  body,button,input{
+
+  font-family: 'Oswald', sans-serif;
+
+  }
+  body {
+  background-color: : pink;
+}
+
+
+  h1{
+    background-color: lightgreen;
+    width:1238px;
+    height:60px;
+    padding:10px 10px;
+  }
+  span{
+
+    text-decoration: double underline;
+
+  }
+
+  .header{
+    float:left;
+    background-color:rgb(250, 120, 120);
+    width:1502px;
+  }
+
+  .logo1{
+      float:left;
+      height:80px;
+      width:80px;
+      margin:21px;
+  }
+
+  .clg{
+     float:left;
+     width:50px;
+  }
+
+  .logo2{
+     height:80;
+     width:80;
+     float:right;
+     margin:21px;
+  }
+
+  .list{
+  background-color:lightgrey;
+  clear:both;
+  padding:10px 10px;
+  height:90px;
+
+
+  }
+
+  .list ul li{
+  float:left;
+  padding:25px 110px;
+  height:1px;
+  }
+
+
+
+
+  .middle{
+    float:left;
+    width:1180px;
+    clear:both;
+  }
+
+  .rightside{
+     float:left;
+     height:500px;
+     padding:10px 10px;
+     border-color:black;
+     border-left:solid;
+     border-width:3px;
+  }
+  .footer{
+  clear:both;
+  }
+
+  .details_set1 label{
+    float:left;
+    width:90px;
+  }
+  .details_set2 label{
+    float:left;
+    width:90px;
+  }
+
+  .logout{
+    float:right;
+    clear:both;
+  }
+/*  .topnav {
+  background-color: #333;
+  overflow: visible;
+}
+
+/* Style the links inside the navigation bar */
+/*   .topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding:14px 168.7px 16px 25px;
+  text-decoration: none;
+  font-size: 23px;
+  color: black;
+}
+
+/* Change the color of links on hover */
+/*   .topnav a:hover {
+  background-color: #aaa;
+  color: blue;
+}
+
+/* Add a color to the active/current link */
+/*   .topnav a.active {
+  background-color: #4CAF50;
+  color: blue;
+}*/
+
+  </style>
+  <meta charset="utf-8"/>
+  <!--<link rel="stylesheet" href="{% static "styles.css" %}">-->
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700&display=swap" rel="stylesheet"/>
+  <title>Seating Arrangement
+  </title>
+
+</head>
+
+<body bgcolor="lightgrey">
+
+
+  <header>
+    <div class="header">
+      <div class="logo1" >
+        <img src="{% static "logo1.png" %}" height=80px width=80px / >
+      </div>
+
+      <div class="clg">
+        <h1 align=center > KJ Somaiya Institute of Engineering and IT,Sion</h2>
+      </div>
+
+      <div class="logo2" >
+        <img src="{% static "logo2.png" %}" height=80px width=80px />
+      </div>
+    </div>
+<!--    <div class="topnav">
+
+       <a class="active" href="{% static "home.html" %}">Home</a>
+       <a href="{% static "records.html" %}">View Previous Records</a>
+       <a href="{% static "mission.html" %}">Mission</a>
+       <a href="{% static "vision.html" %}">Vision</a>
+       <a href="{% static "aboutus.html" %}">About Us</a>
+
+</div>-->
+<br><br>
+  </header>
+{% block content %}
+{% endblock %}
+
+
+<footer class="footer">
+    <h4 align="center">
+</h4>
+ <h3 align=center> &copy;Copyright kjsieit 2020 </h3>
+    <h4 align=center> Privacy policy ||Terms of use</h4>
+  </footer>
+
+
+
+
+
+
+</body>
 </html>

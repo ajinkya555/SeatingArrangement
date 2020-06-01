@@ -1,29 +1,56 @@
 {% extends 'base.html' %}
 {% block content %}
 {{comb}}
+<div class="logout">
 
-    <form class="" action="generate" method="post">
-      {% csrf_token %}
-      <h1>Login Done</h1>
-          <label for="subject">Enter Department name:</label>
-          <input type="text" name="dep" value="" required>
-        <br>
-          <label for="">Select Exam date</label>
-          <input type="date" name="date" value="" required>
-        <br>
-          <label for="time">Time :</label>
-          <input type="text" name="time" value="" required>
-        <br>
-          <label for="subject1">SE subject:</label>
-          <input type="text" name="subject1" value="" required>
-        <br>
-          <label for="subject2">TE subject:</label>
-          <input type="text" name="subject2" value="" required>
-        <br>
-          <label for="subject3">BE subject:</label>
-          <input type="text" name="subject3" value="" required>
-        <br>
-          <label for="number">Number of students:</label>
+          <form class="" action="logout" method="post">
+            <br>
+              {% csrf_token %}
+          <input type="submit" name="" value="Logout">
+          </form>
+         </div>
+
+
+
+    <br>
+
+      <form class="" action="generate" method="post">
+        <br><br><br><br>
+        {% csrf_token %}
+        <fieldset class="details_set1">
+
+          <legend>Details set1:</legend>
+            <p>
+              <label for="subject">Dept name:</label>
+              <input type="text" name="dep" value="" required id="subject">
+            </p>
+            <p>
+              <label for="">Exam date:</label>
+              <input type="date" name="date" value="" required>
+            </p>
+            <p>
+              <label for="time">Time :</label>
+              <input type="text" name="time" value="" required>
+            </p>
+            <p>
+              <label for="subject1">SE subject:</label>
+              <input type="text" name="subject1" value="" required>
+            </p>
+            <p>
+              <label for="subject2">TE subject:</label>
+              <input type="text" name="subject2" value="" required>
+            </p>
+            <p>
+              <label for="subject3">BE subject:</label>
+              <input type="text" name="subject3" value="" required>
+            </p>
+          </fieldset>
+
+          <fieldset class="details_set2">
+            <legend>Details_set2:</legend>
+            <p>
+              <label for="number">Number of students:</label><br>
+            </p>
           <input type="text" name="sSEA" value="" placeholder="No. of SE A" required>
         <!--  <input type="text" name="eSEA" value="" placeholder="Ending No. of SE A" required>-->
           <input type="text" name="sSEB" value="" placeholder="No. of SE B" required>
@@ -36,8 +63,9 @@
       <!--    <input type="text" name="eBEA" value="" placeholder="Ending No. of BE A" required>-->
           <input type="text" name="sBEB" value="" placeholder="No. of BE B" required>
       <!--    <input type="text" name="eBEB" value="" placeholder="Ending No. of BEB" required>-->
-        <br>
-            <label for="li">Classroom Available(mention classroom no.):</label>
+        <p>
+          <label for="li"> Available Classroom no:</label><br>
+        </p>
             <input type="text" name="l1" required>
             <input type="text" name="l2" required>
             <input type="text" name="l3" required>
@@ -47,8 +75,9 @@
             <input type="text" name="l7" required>
             <input type="text" name="l8" required>
             <input type="text" name="l9" required>
-          <br>
-          <label for="li">Teacher (M):</label>
+          <p>
+            <label for="li">Teacher for maximum duty:</label>
+          </p>
           <input type="text" name="m1" required>
           <input type="text" name="m2" required>
           <input type="text" name="m3" required>
@@ -64,8 +93,10 @@
           <input type="text" name="m13" required>
           <input type="text" name="m14" required>
           <input type="text" name="m15" required>
-          <br>
-          <label for="li">Teacher (S):</label>
+
+          <p>
+            <label for="li">Teacher for minimum duty:</label>
+          </p>
           <input type="text" name="s1" required>
           <input type="text" name="s2" required>
           <input type="text" name="s3" required>
@@ -75,12 +106,11 @@
           <input type="text" name="s7" required>
           <input type="text" name="s8" required>
           <input type="text" name="s9" required>
+</fieldset>
+<h2 align=center>
+   <input type="submit" name="generate" value="GenerateArrangement">
+</h2>
+</form>
 
-          <input type="submit" name="generate" value="GenerateArrangement">
 
-    </form>
-    <form class="" action="logout" method="post">
-      {% csrf_token %}
-      <input type="submit" name="" value="Logout">
-    </form>
 {% endblock %}

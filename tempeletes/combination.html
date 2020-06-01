@@ -1,7 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="logout">
 
-    <form class="" action="combination" method="POST">
+  <form class="" action="logout" method="post">
+    <br>
+      {% csrf_token %}
+    <input type="submit" name="" value="Logout">
+  </form>
+</div>
+<br>
+<br>
+  <h2>Login Done</h2>
+<form class="" action="combination" method="POST">
       {% csrf_token %}
       <label for="">Choose the years:</label>
       <select name="com1">
@@ -11,6 +21,6 @@
         <option >TE,BE</option>
       </select>
       <input type="submit" name="" value="Done">
-    </form>
+</form>
 
 {% endblock %}

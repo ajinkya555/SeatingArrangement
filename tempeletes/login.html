@@ -1,10 +1,54 @@
 {% extends 'base.html' %}
 {% block content %}
+<!DOCTYPE html>
 
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700&display=swap" rel="stylesheet"/>
+  <title>
+  </title>
+
+</head>
+
+<body bgcolor="white" >
+  <section class="middle">
+  <article>
+    <header>
+      <br>
+      <h2 align=center ><span>SEATING ARRANGEMENT GENERATOR</span></h2>
+      <h3 align=center>The best Seating arrangement generator - Fast, easy-to-use and loaded with powerful features.</h3>
+    </header>
+      <h4>When it comes to exams, the most important job is to decide the seating arrangement of students of various   divisions,year(like FE,SE,TE,BE) based on their roll numbers and available classrooms.<br> This project helps in creating Seating arrangement easily and quickly.
+      </h4>
+      <h3>Few easy steps to a seating arrangement</h3>
+      <ul>
+        <h4>
+          <li>Register and login</li>
+          <li>Give inputs Exam date,Enter Department name,classroom Available,Time,subjects,etc</li>
+          <li>Click generate button</li>
+        </h4>
+      </ul>
+      <h3>Few highlights</h3>
+        <ul>
+          <h4>
+            <li>Several forms of seating arrangements can be generated just by clicking generate button subsequently</li>
+            <li>Easy to use</li>
+            <li>Saves time</li> <br>
+          </h4>
+        </ul>
+  </article>
+</section>
+
+<br><br><br><br><br>
     <form class="" action="lr" method="post">
-      {% csrf_token %}
+      {% csrf_token %}<br>
 
-    <input type="submit" name="lr" value="Login/Register">
+    <input type="submit" name="lr" value="Login/Register" >
 
     </form>
+    </html>
 {% endblock %}
