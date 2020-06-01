@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700&display=swap" rel="stylesheet">
+    <title></title>
+  </head>
+  <body bgcolor="cyan">
+    <nav>
+    <ul>
+      <li><a href="{% static 'home.html'%}">Home</a></li>
+      <li><a href="{% static 'records.html' %}">View Previous Records</a></li>
+      <li><a href="{% static 'mission.html' %}">Mission</a></li>
+      <li><a href="{% static 'vision.html' %}">Vision</a></li>
+      <li><a href="{% static 'aboutus.html' %}">About Us</a></li>
+    </ul>
+    </nav>
+    <h1>Welcome</h1>
+    {% block content %}
+
+    {% endblock %}
+  </body>
+</html>

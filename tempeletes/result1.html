@@ -1,0 +1,213 @@
+<style type="text/css">
+
+table {
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+}
+
+</style>
+<script type="text/javascript">
+  function printc(el){
+    var restorepage = document.body.innerHTML;
+    var printcontent = document.getElementById(el).innerHTML;
+    document.body.innerHTML = printcontent;
+    window.print();
+    document.body.innerHTML = restorepage;
+  }
+</script>
+{% extends 'base.html' %}
+{% block content %}
+
+​<button onclick="printc('div1')">Print</button>
+<div id="div1">
+Department: {{dep}}
+<br>
+Subjects:<br>
+SE: {{sub1}}<br>
+TE: {{sub2}}<br>
+BE: {{sub3}}
+
+<br>
+<table class="tg">
+  <colgroup>
+  <col style="width: 400px">
+  <col style="width: 250px">
+  <col style="width: 150px">
+  <col style="width: 150px">
+  </colgroup>
+  <tr>
+    <th class="tg-0pky"><h2>Time & Date</h2></th>
+    <th class="tg-0lax"><h2>Classroom</h2></th>
+    <th class="tg-0lax"><h2>Class</h2></th>
+    <th class="tg-0lax"><h2>Roll No.</h2></th>
+  </tr>
+  <tr>
+    <td class="tg-0pky" rowspan="18"><h3>Date: {{date}}<br>
+    Time: {{time}}</h3></td>
+    <td class="tg-0lax" rowspan="2">{{cr1}}</td>
+    <td class="tg-0lax">SE {{div0}}</td>
+    <td class="tg-0lax">{{sa3}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">TE {{div0}}</td>
+    <td class="tg-0lax">{{ta2}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="2">{{cr2}}</td>
+    <td class="tg-0lax">SE {{div0}}</td>
+    <td class="tg-0lax">{{sa1}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">TE {{div0}}</td>
+    <td class="tg-0lax">{{ta3}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="2">{{cr3}}</td>
+    <td class="tg-0lax">SE {{div0}}</td>
+    <td class="tg-0lax">{{sa2}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">TE {{div0}}</td>
+    <td class="tg-0lax">{{ta1}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="2">{{cr4}}</td>
+    <td class="tg-0lax">SE {{div1}}</td>
+    <td class="tg-0lax">{{sb1}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">BE {{div0}}</td>
+    <td class="tg-0lax">{{ba1}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="2">{{cr5}}</td>
+    <td class="tg-0lax">SE {{div1}}</td>
+    <td class="tg-0lax">{{sb2}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">BE {{div0}}</td>
+    <td class="tg-0lax">{{ba3}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="2">{{cr6}}</td>
+    <td class="tg-0lax">SE {{div1}}</td>
+    <td class="tg-0lax">{{sb3}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">BE {{div0}}</td>
+    <td class="tg-0lax">{{ba2}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="2">{{cr7}}</td>
+    <td class="tg-0lax">TE {{div1}}</td>
+    <td class="tg-0lax">{{tb3}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">BE {{div1}}</td>
+    <td class="tg-0lax">{{bb3}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="2">{{cr8}}</td>
+    <td class="tg-0lax">TE {{div1}}</td>
+    <td class="tg-0lax">{{tb1}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">BE {{div1}}</td>
+    <td class="tg-0lax">{{bb2}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="2">{{cr9}}</td>
+    <td class="tg-0lax">TE {{div1}}</td>
+    <td class="tg-0lax">{{tb2}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">BE {{div1}}</td>
+    <td class="tg-0lax">{{bb1}}</td>
+  </tr>
+</table>
+
+<br><br>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 551px">
+<colgroup>
+<col style="width: 400px">
+<col style="width: 151px">
+</colgroup>
+  <tr>
+    <th class="tg-0a7q">Teachers</th>
+    <th class="tg-lboi">Classroom</th>
+  </tr>
+  <tr>
+    <td class="tg-lboi">{{t1}}</td>
+    <td class="tg-lboi" rowspan="2">{{cr1}}</td>
+  </tr>
+  <tr>
+    <td class="tg-lboi">{{t2}}</td>
+  </tr>
+  <tr>
+    <td class="tg-lboi">{{t3}}</td>
+    <td class="tg-lboi" rowspan="2">{{cr2}}</td>
+  </tr>
+  <tr>
+    <td class="tg-lboi">{{t4}}</td>
+  </tr>
+  <tr>
+    <td class="tg-lboi">{{t5}}</td>
+    <td class="tg-lboi" rowspan="2">{{cr3}}</td>
+  </tr>
+  <tr>
+    <td class="tg-lboi">{{t6}}</td>
+  </tr>
+  <tr>
+    <td class="tg-lboi">{{t7}}</td>
+    <td class="tg-lboi" rowspan="2">{{cr4}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">{{t8}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">{{t9}}</td>
+    <td class="tg-0pky" rowspan="2">{{cr5}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">{{t10}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">{{t11}}</td>
+    <td class="tg-0pky" rowspan="2">{{cr6}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">{{t12}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">{{t13}}</td>
+    <td class="tg-0pky" rowspan="2">{{cr7}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">{{t14}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">{{t15}}</td>
+    <td class="tg-0pky" rowspan="2">{{cr8}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">{{t16}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">{{t17}}</td>
+    <td class="tg-0pky" rowspan="2">{{cr9}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">{{t18}}</td>
+  </tr>
+</table>
+
+<br>
+</div>
+<form class="" action="logout" method="post">
+  {% csrf_token %}
+  <input type="submit" name="" value="Logout">
+</form>
+{% endblock %}

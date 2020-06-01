@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Register Here</h1>
+    <form class="" action="areg" method="POST" >
+      {% csrf_token %}
+      <label for="">Firstname</label>
+      <input type="text" name="first_name" value="" required><br>
+      <label for="">Lastname</label>
+      <input type="text" name="last_name" value="" required><br>
+      <label for="">Username</label>
+      <input type="text" name="username" value="" required><br>
+      <label for="">E-mail</label>
+      <input type="email" name="email" value="" required><br>
+      <label for="">Password</label>
+      <input type="password" name="password1" value="" required><br>
+      <label for="">Confirm Password</label>
+      <input type="password" name="password2" value="" required><br>
+      <input type="submit" name="" value="Register">
+
+
+    </form>
+    {% for message in messages %}
+    <h1>{{message}}</h1>
+    {% endfor %}
+
+
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+{{comb}}
+
+    <form class="" action="generate2" method="post">
+      {% csrf_token %}
+      <h1>Login Done</h1>
+          <label for="subject">Enter Department name:</label>
+          <input type="text" name="dep" value="" required>
+        <br>
+          <label for="">Select Exam date</label>
+          <input type="date" name="date" value="" required>
+        <br>
+          <label for="time">Time :</label>
+          <input type="text" name="time" value="" required>
+        <br>
+          <label for="subject1">SE subject:</label>
+          <input type="text" name="subject1" value="" required>
+        <br>
+          <label for="subject2">TE subject:</label>
+          <input type="text" name="subject2" value="" required>
+        <br>
+
+          <label for="number">Number of students:</label>
+          <input type="text" name="sSEA" value="" placeholder="No. of SE A" required>
+        <!--  <input type="text" name="eSEA" value="" placeholder="Ending No. of SE A" required>-->
+          <input type="text" name="sSEB" value="" placeholder="No. of SE B" required>
+        <!--  <input type="text" name="eSEB" value="" placeholder="Ending No. of SE B" required>-->
+          <input type="text" name="sTEA" value="" placeholder="No. of TE A" required>
+        <!--  <input type="text" name="eTEA" value="" placeholder="Ending No. of TE A" required>-->
+          <input type="text" name="sTEB" value="" placeholder="No. of TE B" required>
+      <!--    <input type="text" name="eTEB" value="" placeholder="Ending No. of TE B" required>-->
+
+        <br>
+            <label for="li">Classroom Available(mention classroom no.):</label>
+            <input type="text" name="l1" required>
+            <input type="text" name="l2" required>
+            <input type="text" name="l3" required>
+            <input type="text" name="l4" required>
+            <input type="text" name="l5" required>
+            <input type="text" name="l6" required>
+          <br>
+          <label for="li">Teacher (M):</label>
+          <input type="text" name="m1" required>
+          <input type="text" name="m2" required>
+          <input type="text" name="m3" required>
+          <input type="text" name="m4" required>
+          <input type="text" name="m5" required>
+          <input type="text" name="m6" required>
+          <input type="text" name="m7" required>
+          <input type="text" name="m8" required>
+          <input type="text" name="m9" required>
+          <input type="text" name="m10" required>
+          <input type="text" name="m11" required>
+          <input type="text" name="m12" required>
+
+          <br>
+          <label for="li">Teacher (S):</label>
+          <input type="text" name="s1" required>
+          <input type="text" name="s2" required>
+          <input type="text" name="s3" required>
+          <input type="text" name="s4" required>
+          <input type="text" name="s5" required>
+          <input type="text" name="s6" required>
+          
+
+          <input type="submit" name="generate" value="GenerateArrangement">
+
+    </form>
+    <form class="" action="logout" method="post">
+      {% csrf_token %}
+      <input type="submit" name="" value="Logout">
+    </form>
+{% endblock %}

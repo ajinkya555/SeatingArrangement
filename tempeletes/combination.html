@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <form class="" action="combination" method="POST">
+      {% csrf_token %}
+      <label for="">Choose the years:</label>
+      <select name="com1">
+        <option >SE,TE,BE</option>
+        <option >SE,TE</option>
+        <option >SE,BE</option>
+        <option >TE,BE</option>
+      </select>
+      <input type="submit" name="" value="Done">
+    </form>
+
+{% endblock %}
