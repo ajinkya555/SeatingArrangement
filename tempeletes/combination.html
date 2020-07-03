@@ -13,13 +13,28 @@
   <h2>Login Done</h2>
 <form class="" action="combination" method="POST">
       {% csrf_token %}
-      <label for="">Choose the years:</label>
+      <label for="">Choose the years : </label>
       <select name="com1">
         <option >SE,TE,BE</option>
         <option >SE,TE</option>
         <option >SE,BE</option>
         <option >TE,BE</option>
+        <option >SE</option>
+        <option >TE</option>
+        <option >BE</option>
       </select>
+      <br>
+      <label for="">Number of Exams : </label>
+
+      <select name="com2">
+        <option >1</option>
+        <option >2</option>
+        <option >3</option>
+        <option >4</option>
+        <option >5</option>
+        <option >6</option>
+      </select>
+      <br>
       <input type="submit" name="" value="Done">
 </form>
 

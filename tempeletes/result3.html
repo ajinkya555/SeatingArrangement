@@ -28,16 +28,20 @@ table, th, td {
   </form>
 </div>
 
-
-
-
 ​
 <div id="div1">
-Department: {{dep}}
+<h2>
+Department : {{dep}}<br>
+Semester : {{eo}}<br>
+Unit Test : {{unit}}<br>
+</h2>
+{%if num > 1%}
+<h2>First Subject</h2>
+{%endif%}
 <br>
 Subjects:<br>
-SE: {{sub1}}<br>
-BE: {{sub3}}
+{{z1}}: {{sub1}}<br>
+
 
 <br>
 <table class="tg" align=center style="text-align:center">
@@ -57,57 +61,51 @@ BE: {{sub3}}
     <td class="tg-0pky" rowspan="12"><h3>Date: {{date}}<br>
     Time: {{time}}</h3></td>
     <td class="tg-0lax" rowspan="2">{{cr1}}</td>
-    <td class="tg-0lax">SE {{div1}}</td>
+    <td class="tg-0lax">{{z1}}  A</td>
     <td class="tg-0lax">{{sa3}}</td>
   </tr>
   <tr>
-    <td class="tg-0lax">BE {{div0}}</td>
-    <td class="tg-0lax">{{bb2}}</td>
+
   </tr>
   <tr>
     <td class="tg-0lax" rowspan="2">{{cr2}}</td>
-    <td class="tg-0lax">SE {{div1}}</td>
+    <td class="tg-0lax">{{z1}}  A</td>
     <td class="tg-0lax">{{sa1}}</td>
   </tr>
   <tr>
-    <td class="tg-0lax">BE {{div0}}</td>
-    <td class="tg-0lax">{{bb3}}</td>
+
   </tr>
   <tr>
     <td class="tg-0lax" rowspan="2">{{cr3}}</td>
-    <td class="tg-0lax">SE {{div1}}</td>
+    <td class="tg-0lax">{{z1}}  A</td>
     <td class="tg-0lax">{{sa2}}</td>
   </tr>
   <tr>
-    <td class="tg-0lax">BE {{div0}}</td>
-    <td class="tg-0lax">{{bb1}}</td>
+
   </tr>
   <tr>
     <td class="tg-0lax" rowspan="2">{{cr4}}</td>
-    <td class="tg-0lax">SE {{div0}}</td>
+    <td class="tg-0lax">{{z1}}  B</td>
     <td class="tg-0lax">{{sb1}}</td>
   </tr>
   <tr>
-    <td class="tg-0lax">BE {{div1}}</td>
-    <td class="tg-0lax">{{ba1}}</td>
+
   </tr>
   <tr>
     <td class="tg-0lax" rowspan="2">{{cr5}}</td>
-    <td class="tg-0lax">SE {{div0}}</td>
+    <td class="tg-0lax">{{z1}}  B</td>
     <td class="tg-0lax">{{sb2}}</td>
   </tr>
   <tr>
-    <td class="tg-0lax">BE {{div1}}</td>
-    <td class="tg-0lax">{{ba3}}</td>
+
   </tr>
   <tr>
     <td class="tg-0lax" rowspan="2">{{cr6}}</td>
-    <td class="tg-0lax">SE {{div0}}</td>
+    <td class="tg-0lax">{{z1}}  B</td>
     <td class="tg-0lax">{{sb3}}</td>
   </tr>
   <tr>
-    <td class="tg-0lax">BE {{div1}}</td>
-    <td class="tg-0lax">{{ba2}}</td>
+
   </tr>
 </table>
 
@@ -127,49 +125,924 @@ BE: {{sub3}}
     <td class="tg-lboi" rowspan="2">{{cr1}}</td>
   </tr>
   <tr>
-    <td class="tg-lboi">{{t2}}</td>
+
   </tr>
   <tr>
-    <td class="tg-lboi">{{t3}}</td>
+    <td class="tg-lboi">{{t2}}</td>
     <td class="tg-lboi" rowspan="2">{{cr2}}</td>
   </tr>
   <tr>
-    <td class="tg-lboi">{{t4}}</td>
+
   </tr>
   <tr>
-    <td class="tg-lboi">{{t5}}</td>
+    <td class="tg-lboi">{{t3}}</td>
     <td class="tg-lboi" rowspan="2">{{cr3}}</td>
   </tr>
   <tr>
-    <td class="tg-lboi">{{t6}}</td>
+
   </tr>
   <tr>
-    <td class="tg-lboi">{{t7}}</td>
+    <td class="tg-lboi">{{t4}}</td>
     <td class="tg-lboi" rowspan="2">{{cr4}}</td>
   </tr>
   <tr>
-    <td class="tg-0pky">{{t8}}</td>
+
   </tr>
   <tr>
-    <td class="tg-0pky">{{t9}}</td>
+    <td class="tg-0pky">{{t5}}</td>
     <td class="tg-0pky" rowspan="2">{{cr5}}</td>
   </tr>
   <tr>
-    <td class="tg-0pky">{{t10}}</td>
+
   </tr>
   <tr>
-    <td class="tg-0pky">{{t11}}</td>
+    <td class="tg-0pky">{{t6}}</td>
     <td class="tg-0pky" rowspan="2">{{cr6}}</td>
   </tr>
   <tr>
-    <td class="tg-0pky">{{t12}}</td>
+
   </tr>
 </table>
-</div>
+
 <br>
+
+
+  {% if num >= 2 %}
+  <br>
+  <h2>Second Subject</h2>
+  Subjects:<br>
+  {{z1}}: {{sub12}}<br>
+
+
+  <br>
+  <table class="tg" align=center style="text-align:center">
+    <colgroup>
+    <col style="width: 400px">
+    <col style="width: 250px">
+    <col style="width: 150px">
+    <col style="width: 150px">
+    </colgroup>
+    <tr>
+      <th class="tg-0pky"><h2>Time & Date</h2></th>
+      <th class="tg-0lax"><h2>Classroom</h2></th>
+      <th class="tg-0lax"><h2>Class</h2></th>
+      <th class="tg-0lax"><h2>Roll No.</h2></th>
+    </tr>
+    <tr>
+      <td class="tg-0pky" rowspan="12"><h3>Date: {{date2}}<br>
+      Time: {{time2}}</h3></td>
+      <td class="tg-0lax" rowspan="2">{{cr12}}</td>
+      <td class="tg-0lax">{{z1}}  A</td>
+      <td class="tg-0lax">{{sa32}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr22}}</td>
+      <td class="tg-0lax">{{z1}}  A</td>
+      <td class="tg-0lax">{{sa12}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr32}}</td>
+      <td class="tg-0lax">{{z1}}  A</td>
+      <td class="tg-0lax">{{sa22}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr42}}</td>
+      <td class="tg-0lax">{{z1}}  B</td>
+      <td class="tg-0lax">{{sb12}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr52}}</td>
+      <td class="tg-0lax">{{z1}}  B</td>
+      <td class="tg-0lax">{{sb22}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr62}}</td>
+      <td class="tg-0lax">{{z1}}  B</td>
+      <td class="tg-0lax">{{sb32}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+  </table>
+
+  <br><br>
+
+  <table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed; width: 551px">
+  <colgroup>
+  <col style="width: 400px">
+  <col style="width: 151px">
+  </colgroup>
+    <tr>
+      <th class="tg-0a7q">Teachers</th>
+      <th class="tg-lboi">Classroom</th>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t12}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr12}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t22}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr22}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t32}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr32}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t42}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr42}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t52}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr52}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t62}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr62}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+  </table>
+  <br>
+
+  {%endif%}
+
+  {% if num >= 3 %}
+  <br>
+  <h2>Third Subject</h2>
+  Subjects:<br>
+  {{z1}}: {{sub13}}<br>
+
+
+  <br>
+  <table class="tg" align=center style="text-align:center">
+    <colgroup>
+    <col style="width: 400px">
+    <col style="width: 250px">
+    <col style="width: 150px">
+    <col style="width: 150px">
+    </colgroup>
+    <tr>
+      <th class="tg-0pky"><h2>Time & Date</h2></th>
+      <th class="tg-0lax"><h2>Classroom</h2></th>
+      <th class="tg-0lax"><h2>Class</h2></th>
+      <th class="tg-0lax"><h2>Roll No.</h2></th>
+    </tr>
+    <tr>
+      <td class="tg-0pky" rowspan="12"><h3>Date: {{date3}}<br>
+      Time: {{time3}}</h3></td>
+      <td class="tg-0lax" rowspan="2">{{cr13}}</td>
+      <td class="tg-0lax">{{z1}}  A</td>
+      <td class="tg-0lax">{{sa33}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr23}}</td>
+      <td class="tg-0lax">{{z1}}  A</td>
+      <td class="tg-0lax">{{sa13}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr33}}</td>
+      <td class="tg-0lax">{{z1}}  A</td>
+      <td class="tg-0lax">{{sa23}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr43}}</td>
+      <td class="tg-0lax">{{z1}}  B</td>
+      <td class="tg-0lax">{{sb13}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr53}}</td>
+      <td class="tg-0lax">{{z1}}  B</td>
+      <td class="tg-0lax">{{sb23}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr63}}</td>
+      <td class="tg-0lax">{{z1}}  B</td>
+      <td class="tg-0lax">{{sb33}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+  </table>
+
+  <br><br>
+
+  <table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed; width: 551px">
+  <colgroup>
+  <col style="width: 400px">
+  <col style="width: 151px">
+  </colgroup>
+    <tr>
+      <th class="tg-0a7q">Teachers</th>
+      <th class="tg-lboi">Classroom</th>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t13}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr13}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t23}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr23}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t33}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr33}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t43}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr43}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t53}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr53}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t63}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr63}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+  </table>
+  <br>
+
+  {%endif%}
+
+  {% if num >= 4 %}
+  <br>
+  <h2>Fourth Subject</h2>
+  Subjects:<br>
+  {{z1}}: {{sub14}}<br>
+
+
+  <br>
+  <table class="tg" align=center style="text-align:center">
+    <colgroup>
+    <col style="width: 400px">
+    <col style="width: 250px">
+    <col style="width: 150px">
+    <col style="width: 150px">
+    </colgroup>
+    <tr>
+      <th class="tg-0pky"><h2>Time & Date</h2></th>
+      <th class="tg-0lax"><h2>Classroom</h2></th>
+      <th class="tg-0lax"><h2>Class</h2></th>
+      <th class="tg-0lax"><h2>Roll No.</h2></th>
+    </tr>
+    <tr>
+      <td class="tg-0pky" rowspan="12"><h3>Date: {{date4}}<br>
+      Time: {{time4}}</h3></td>
+      <td class="tg-0lax" rowspan="2">{{cr14}}</td>
+      <td class="tg-0lax">{{z1}}  A</td>
+      <td class="tg-0lax">{{sa34}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr24}}</td>
+      <td class="tg-0lax">{{z1}}  A</td>
+      <td class="tg-0lax">{{sa14}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr34}}</td>
+      <td class="tg-0lax">{{z1}}  A</td>
+      <td class="tg-0lax">{{sa24}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr44}}</td>
+      <td class="tg-0lax">{{z1}}  B</td>
+      <td class="tg-0lax">{{sb14}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr54}}</td>
+      <td class="tg-0lax">{{z1}}  B</td>
+      <td class="tg-0lax">{{sb24}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr64}}</td>
+      <td class="tg-0lax">{{z1}}  B</td>
+      <td class="tg-0lax">{{sb34}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+  </table>
+
+  <br><br>
+
+  <table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed; width: 551px">
+  <colgroup>
+  <col style="width: 400px">
+  <col style="width: 151px">
+  </colgroup>
+    <tr>
+      <th class="tg-0a7q">Teachers</th>
+      <th class="tg-lboi">Classroom</th>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t14}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr14}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t24}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr24}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t34}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr34}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t44}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr44}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t54}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr54}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t64}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr64}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+  </table>
+  <br>
+
+  {%endif%}
+
+  {% if num >= 5 %}
+  <br>
+  <h2>Fifth Subject</h2>
+  Subjects:<br>
+  {{z1}}: {{sub15}}<br>
+
+
+  <br>
+  <table class="tg" align=center style="text-align:center">
+    <colgroup>
+    <col style="width: 400px">
+    <col style="width: 250px">
+    <col style="width: 150px">
+    <col style="width: 150px">
+    </colgroup>
+    <tr>
+      <th class="tg-0pky"><h2>Time & Date</h2></th>
+      <th class="tg-0lax"><h2>Classroom</h2></th>
+      <th class="tg-0lax"><h2>Class</h2></th>
+      <th class="tg-0lax"><h2>Roll No.</h2></th>
+    </tr>
+    <tr>
+      <td class="tg-0pky" rowspan="12"><h3>Date: {{date5}}<br>
+      Time: {{time5}}</h3></td>
+      <td class="tg-0lax" rowspan="2">{{cr15}}</td>
+      <td class="tg-0lax">{{z1}}  A</td>
+      <td class="tg-0lax">{{sa35}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr25}}</td>
+      <td class="tg-0lax">{{z1}}  A</td>
+      <td class="tg-0lax">{{sa15}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr35}}</td>
+      <td class="tg-0lax">{{z1}}  A</td>
+      <td class="tg-0lax">{{sa25}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr45}}</td>
+      <td class="tg-0lax">{{z1}}  B</td>
+      <td class="tg-0lax">{{sb15}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr55}}</td>
+      <td class="tg-0lax">{{z1}}  B</td>
+      <td class="tg-0lax">{{sb25}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr65}}</td>
+      <td class="tg-0lax">{{z1}}  B</td>
+      <td class="tg-0lax">{{sb35}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+  </table>
+
+  <br><br>
+
+  <table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed; width: 551px">
+  <colgroup>
+  <col style="width: 400px">
+  <col style="width: 151px">
+  </colgroup>
+    <tr>
+      <th class="tg-0a7q">Teachers</th>
+      <th class="tg-lboi">Classroom</th>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t15}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr15}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t25}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr25}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t35}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr35}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t45}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr45}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t55}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr55}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t65}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr65}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+  </table>
+  <br>
+
+  {%endif%}
+
+  {% if num >= 6 %}
+  <br>
+  <h2>Sixth Subject</h2>
+  Subjects:<br>
+
+  {{z1}}: {{sub16}}<br>
+
+
+  <br>
+  <table class="tg" align=center style="text-align:center">
+    <colgroup>
+    <col style="width: 400px">
+    <col style="width: 250px">
+    <col style="width: 150px">
+    <col style="width: 150px">
+    </colgroup>
+    <tr>
+      <th class="tg-0pky"><h2>Time & Date</h2></th>
+      <th class="tg-0lax"><h2>Classroom</h2></th>
+      <th class="tg-0lax"><h2>Class</h2></th>
+      <th class="tg-0lax"><h2>Roll No.</h2></th>
+    </tr>
+    <tr>
+      <td class="tg-0pky" rowspan="12"><h3>Date: {{date6}}<br>
+      Time: {{time6}}</h3></td>
+      <td class="tg-0lax" rowspan="2">{{cr16}}</td>
+      <td class="tg-0lax">{{z1}}  A</td>
+      <td class="tg-0lax">{{sa36}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr26}}</td>
+      <td class="tg-0lax">{{z1}}  A</td>
+      <td class="tg-0lax">{{sa16}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr36}}</td>
+      <td class="tg-0lax">{{z1}}  A</td>
+      <td class="tg-0lax">{{sa26}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr46}}</td>
+      <td class="tg-0lax">{{z1}}  B</td>
+      <td class="tg-0lax">{{sb16}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr56}}</td>
+      <td class="tg-0lax">{{z1}}  B</td>
+      <td class="tg-0lax">{{sb26}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr66}}</td>
+      <td class="tg-0lax">{{z1}}  B</td>
+      <td class="tg-0lax">{{sb36}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+  </table>
+
+  <br><br>
+
+  <table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed; width: 551px">
+  <colgroup>
+  <col style="width: 400px">
+  <col style="width: 151px">
+  </colgroup>
+    <tr>
+      <th class="tg-0a7q">Teachers</th>
+      <th class="tg-lboi">Classroom</th>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t16}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr16}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t26}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr26}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t36}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr36}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t46}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr46}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t56}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr56}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t66}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr66}}</td>
+    </tr>
+    <tr>
+
+    </tr>
+  </table>
+  <br>
+
+  {%endif%}
+
+  <h2>Teacher's Duty List and Timetable </h2>
+  <table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed;width: 698px">
+  <colgroup>
+    <col style="width: 420px">
+    <col style="width: 300px">
+  </colgroup>
+<thead>
+  <tr>
+    <th><h2>Teachers Name</h2></th>
+    <th><h2>Number of Duties</h2></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>{{m1}}</td>
+    <td>{{count1}}</td>
+  </tr>
+  <tr>
+    <td>{{m2}}</td>
+    <td>{{count2}}</td>
+  </tr>
+  <tr>
+    <td>{{m3}}</td>
+    <td>{{count3}}</td>
+  </tr>
+  <tr>
+    <td>{{m4}}</td>
+    <td>{{count4}}</td>
+  </tr>
+  <tr>
+    <td>{{m5}}</td>
+    <td>{{count5}}</td>
+  </tr>
+  <tr>
+    <td>{{m6}}</td>
+    <td>{{count6}}</td>
+  </tr>
+  <tr>
+    <td>{{s1}}</td>
+    <td>{{count7}}</td>
+  </tr>
+  <tr>
+    <td>{{s2}}</td>
+    <td>{{count8}}</td>
+  </tr>
+  <tr>
+    <td>{{s3}}</td>
+    <td>{{count9}}</td>
+  </tr>
+</tbody>
+</table>
+
+
 <h2 align="center">
-  <button onclick="printc('div1')">Print</button>
 </h2>
+
+<table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed; width: 1355px">
+<colgroup>
+<col style="width: 298px">
+<col style="width: 184px">
+<col style="width: 170px">
+<col style="width: 161px">
+<col style="width: 178px">
+<col style="width: 174px">
+<col style="width: 190px">
+</colgroup>
+<thead>
+  <tr>
+    <th><h2>Teacher Name</h2></th>
+    <th>{{date}} and {{time}}</th>
+    {% if num >= 2 %}<th>{{date2}} and {{time2}}</th>{%endif%}
+    {% if num >= 3 %}<th>{{date3}} and {{time3}}</th>{%endif%}
+    {% if num >= 4 %}<th>{{date4}} and {{time4}}</th>{%endif%}
+    {% if num >= 5 %}<th>{{date5}} and {{time5}}</th>{%endif%}
+    {% if num >= 6 %}<th>{{date6}} and {{time6}}</th>{%endif%}
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>{{m1}}</td>
+    <td>{% if m1 == t1 %}Classroom {{cr1}}{%endif%}{% if m1 == t2 %}Classroom {{cr2}}{%endif%}{% if m1 == t3 %}Classroom {{cr3}}{%endif%}{% if m1 == t4 %}Classroom {{cr4}}{%endif%}{% if m1 == t5 %}Classroom {{cr5}}{%endif%}{% if m1 == t6 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m1 == t12 %}Classroom {{cr12}}{%endif%}{% if m1 == t22 %}Classroom {{cr22}}{%endif%}{% if m1 == t32 %}Classroom {{cr32}}{%endif%}{% if m1 == t42 %}Classroom {{cr42}}{%endif%}{% if m1 == t52 %}Classroom {{cr52}}{%endif%}{% if m1 == t62 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m1 == t13 %}Classroom {{cr13}}{%endif%}{% if m1 == t23 %}Classroom {{cr23}}{%endif%}{% if m1 == t33 %}Classroom {{cr33}}{%endif%}{% if m1 == t43 %}Classroom {{cr43}}{%endif%}{% if m1 == t53 %}Classroom {{cr53}}{%endif%}{% if m1 == t63 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m1 == t14 %}Classroom {{cr14}}{%endif%}{% if m1 == t24 %}Classroom {{cr24}}{%endif%}{% if m1 == t34 %}Classroom {{cr34}}{%endif%}{% if m1 == t44 %}Classroom {{cr44}}{%endif%}{% if m1 == t54 %}Classroom {{cr54}}{%endif%}{% if m1 == t64 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m1 == t15 %}Classroom {{cr15}}{%endif%}{% if m1 == t25 %}Classroom {{cr25}}{%endif%}{% if m1 == t35 %}Classroom {{cr35}}{%endif%}{% if m1 == t45 %}Classroom {{cr45}}{%endif%}{% if m1 == t55 %}Classroom {{cr55}}{%endif%}{% if m1 == t65 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m1 == t16 %}Classroom {{cr16}}{%endif%}{% if m1 == t26 %}Classroom {{cr26}}{%endif%}{% if m1 == t36 %}Classroom {{cr36}}{%endif%}{% if m1 == t46 %}Classroom {{cr46}}{%endif%}{% if m1 == t56 %}Classroom {{cr56}}{%endif%}{% if m1 == t66 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{m2}}</td>
+    <td>{% if m2 == t1 %}Classroom {{cr1}}{%endif%}{% if m2 == t2 %}Classroom {{cr2}}{%endif%}{% if m2 == t3 %}Classroom {{cr3}}{%endif%}{% if m2 == t4 %}Classroom {{cr4}}{%endif%}{% if m2 == t5 %}Classroom {{cr5}}{%endif%}{% if m2 == t6 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m2 == t12 %}Classroom {{cr12}}{%endif%}{% if m2 == t22 %}Classroom {{cr22}}{%endif%}{% if m2 == t32 %}Classroom {{cr32}}{%endif%}{% if m2 == t42 %}Classroom {{cr42}}{%endif%}{% if m2 == t52 %}Classroom {{cr52}}{%endif%}{% if m2 == t62 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m2 == t13 %}Classroom {{cr13}}{%endif%}{% if m2 == t23 %}Classroom {{cr23}}{%endif%}{% if m2 == t33 %}Classroom {{cr33}}{%endif%}{% if m2 == t43 %}Classroom {{cr43}}{%endif%}{% if m2 == t53 %}Classroom {{cr53}}{%endif%}{% if m2 == t63 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m2 == t14 %}Classroom {{cr14}}{%endif%}{% if m2 == t24 %}Classroom {{cr24}}{%endif%}{% if m2 == t34 %}Classroom {{cr34}}{%endif%}{% if m2 == t44 %}Classroom {{cr44}}{%endif%}{% if m2 == t54 %}Classroom {{cr54}}{%endif%}{% if m2 == t64 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m2 == t15 %}Classroom {{cr15}}{%endif%}{% if m2 == t25 %}Classroom {{cr25}}{%endif%}{% if m2 == t35 %}Classroom {{cr35}}{%endif%}{% if m2 == t45 %}Classroom {{cr45}}{%endif%}{% if m2 == t55 %}Classroom {{cr55}}{%endif%}{% if m2 == t65 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m2 == t16 %}Classroom {{cr16}}{%endif%}{% if m2 == t26 %}Classroom {{cr26}}{%endif%}{% if m2 == t36 %}Classroom {{cr36}}{%endif%}{% if m2 == t46 %}Classroom {{cr46}}{%endif%}{% if m2 == t56 %}Classroom {{cr56}}{%endif%}{% if m2 == t66 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{m3}}</td>
+    <td>{% if m3 == t1 %}Classroom {{cr1}}{%endif%}{% if m3 == t2 %}Classroom {{cr2}}{%endif%}{% if m3 == t3 %}Classroom {{cr3}}{%endif%}{% if m3 == t4 %}Classroom {{cr4}}{%endif%}{% if m3 == t5 %}Classroom {{cr5}}{%endif%}{% if m3 == t6 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m3 == t12 %}Classroom {{cr12}}{%endif%}{% if m3 == t22 %}Classroom {{cr22}}{%endif%}{% if m3 == t32 %}Classroom {{cr32}}{%endif%}{% if m3 == t42 %}Classroom {{cr42}}{%endif%}{% if m3 == t52 %}Classroom {{cr52}}{%endif%}{% if m3 == t62 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m3 == t13 %}Classroom {{cr13}}{%endif%}{% if m3 == t23 %}Classroom {{cr23}}{%endif%}{% if m3 == t33 %}Classroom {{cr33}}{%endif%}{% if m3 == t43 %}Classroom {{cr43}}{%endif%}{% if m3 == t53 %}Classroom {{cr53}}{%endif%}{% if m3 == t63 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m3 == t14 %}Classroom {{cr14}}{%endif%}{% if m3 == t24 %}Classroom {{cr24}}{%endif%}{% if m3 == t34 %}Classroom {{cr34}}{%endif%}{% if m3 == t44 %}Classroom {{cr44}}{%endif%}{% if m3 == t54 %}Classroom {{cr54}}{%endif%}{% if m3 == t64 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m3 == t15 %}Classroom {{cr15}}{%endif%}{% if m3 == t25 %}Classroom {{cr25}}{%endif%}{% if m3 == t35 %}Classroom {{cr35}}{%endif%}{% if m3 == t45 %}Classroom {{cr45}}{%endif%}{% if m3 == t55 %}Classroom {{cr55}}{%endif%}{% if m3 == t65 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m3 == t16 %}Classroom {{cr16}}{%endif%}{% if m3 == t26 %}Classroom {{cr26}}{%endif%}{% if m3 == t36 %}Classroom {{cr36}}{%endif%}{% if m3 == t46 %}Classroom {{cr46}}{%endif%}{% if m3 == t56 %}Classroom {{cr56}}{%endif%}{% if m3 == t66 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{m4}}</td>
+    <td>{% if m4 == t1 %}Classroom {{cr1}}{%endif%}{% if m4 == t2 %}Classroom {{cr2}}{%endif%}{% if m4 == t3 %}Classroom {{cr3}}{%endif%}{% if m4 == t4 %}Classroom {{cr4}}{%endif%}{% if m4 == t5 %}Classroom {{cr5}}{%endif%}{% if m4 == t6 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m4 == t12 %}Classroom {{cr12}}{%endif%}{% if m4 == t22 %}Classroom {{cr22}}{%endif%}{% if m4 == t32 %}Classroom {{cr32}}{%endif%}{% if m4 == t42 %}Classroom {{cr42}}{%endif%}{% if m4 == t52 %}Classroom {{cr52}}{%endif%}{% if m4 == t62 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m4 == t13 %}Classroom {{cr13}}{%endif%}{% if m4 == t23 %}Classroom {{cr23}}{%endif%}{% if m4 == t33 %}Classroom {{cr33}}{%endif%}{% if m4 == t43 %}Classroom {{cr43}}{%endif%}{% if m4 == t53 %}Classroom {{cr53}}{%endif%}{% if m4 == t63 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m4 == t14 %}Classroom {{cr14}}{%endif%}{% if m4 == t24 %}Classroom {{cr24}}{%endif%}{% if m4 == t34 %}Classroom {{cr34}}{%endif%}{% if m4 == t44 %}Classroom {{cr44}}{%endif%}{% if m4 == t54 %}Classroom {{cr54}}{%endif%}{% if m4 == t64 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m4 == t15 %}Classroom {{cr15}}{%endif%}{% if m4 == t25 %}Classroom {{cr25}}{%endif%}{% if m4 == t35 %}Classroom {{cr35}}{%endif%}{% if m4 == t45 %}Classroom {{cr45}}{%endif%}{% if m4 == t55 %}Classroom {{cr55}}{%endif%}{% if m4 == t65 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m4 == t16 %}Classroom {{cr16}}{%endif%}{% if m4 == t26 %}Classroom {{cr26}}{%endif%}{% if m4 == t36 %}Classroom {{cr36}}{%endif%}{% if m4 == t46 %}Classroom {{cr46}}{%endif%}{% if m4 == t56 %}Classroom {{cr56}}{%endif%}{% if m4 == t66 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{m5}}</td>
+    <td>{% if m5 == t1 %}Classroom {{cr1}}{%endif%}{% if m5 == t2 %}Classroom {{cr2}}{%endif%}{% if m5 == t3 %}Classroom {{cr3}}{%endif%}{% if m5 == t4 %}Classroom {{cr4}}{%endif%}{% if m5 == t5 %}Classroom {{cr5}}{%endif%}{% if m5 == t6 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m5 == t12 %}Classroom {{cr12}}{%endif%}{% if m5 == t22 %}Classroom {{cr22}}{%endif%}{% if m5 == t32 %}Classroom {{cr32}}{%endif%}{% if m5 == t42 %}Classroom {{cr42}}{%endif%}{% if m5 == t52 %}Classroom {{cr52}}{%endif%}{% if m5 == t62 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m5 == t13 %}Classroom {{cr13}}{%endif%}{% if m5 == t23 %}Classroom {{cr23}}{%endif%}{% if m5 == t33 %}Classroom {{cr33}}{%endif%}{% if m5 == t43 %}Classroom {{cr43}}{%endif%}{% if m5 == t53 %}Classroom {{cr53}}{%endif%}{% if m5 == t63 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m5 == t14 %}Classroom {{cr14}}{%endif%}{% if m5 == t24 %}Classroom {{cr24}}{%endif%}{% if m5 == t34 %}Classroom {{cr34}}{%endif%}{% if m5 == t44 %}Classroom {{cr44}}{%endif%}{% if m5 == t54 %}Classroom {{cr54}}{%endif%}{% if m5 == t64 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m5 == t15 %}Classroom {{cr15}}{%endif%}{% if m5 == t25 %}Classroom {{cr25}}{%endif%}{% if m5 == t35 %}Classroom {{cr35}}{%endif%}{% if m5 == t45 %}Classroom {{cr45}}{%endif%}{% if m5 == t55 %}Classroom {{cr55}}{%endif%}{% if m5 == t65 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m5 == t16 %}Classroom {{cr16}}{%endif%}{% if m5 == t26 %}Classroom {{cr26}}{%endif%}{% if m5 == t36 %}Classroom {{cr36}}{%endif%}{% if m5 == t46 %}Classroom {{cr46}}{%endif%}{% if m5 == t56 %}Classroom {{cr56}}{%endif%}{% if m5 == t66 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{m6}}</td>
+    <td>{% if m6 == t1 %}Classroom {{cr1}}{%endif%}{% if m6 == t2 %}Classroom {{cr2}}{%endif%}{% if m6 == t3 %}Classroom {{cr3}}{%endif%}{% if m6 == t4 %}Classroom {{cr4}}{%endif%}{% if m6 == t5 %}Classroom {{cr5}}{%endif%}{% if m6 == t6 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m6 == t12 %}Classroom {{cr12}}{%endif%}{% if m6 == t22 %}Classroom {{cr22}}{%endif%}{% if m6 == t32 %}Classroom {{cr32}}{%endif%}{% if m6 == t42 %}Classroom {{cr42}}{%endif%}{% if m6 == t52 %}Classroom {{cr52}}{%endif%}{% if m6 == t62 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m6 == t13 %}Classroom {{cr13}}{%endif%}{% if m6 == t23 %}Classroom {{cr23}}{%endif%}{% if m6 == t33 %}Classroom {{cr33}}{%endif%}{% if m6 == t43 %}Classroom {{cr43}}{%endif%}{% if m6 == t53 %}Classroom {{cr53}}{%endif%}{% if m6 == t63 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m6 == t14 %}Classroom {{cr14}}{%endif%}{% if m6 == t24 %}Classroom {{cr24}}{%endif%}{% if m6 == t34 %}Classroom {{cr34}}{%endif%}{% if m6 == t44 %}Classroom {{cr44}}{%endif%}{% if m6 == t54 %}Classroom {{cr54}}{%endif%}{% if m6 == t64 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m6 == t15 %}Classroom {{cr15}}{%endif%}{% if m6 == t25 %}Classroom {{cr25}}{%endif%}{% if m6 == t35 %}Classroom {{cr35}}{%endif%}{% if m6 == t45 %}Classroom {{cr45}}{%endif%}{% if m6 == t55 %}Classroom {{cr55}}{%endif%}{% if m6 == t65 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m6 == t16 %}Classroom {{cr16}}{%endif%}{% if m6 == t26 %}Classroom {{cr26}}{%endif%}{% if m6 == t36 %}Classroom {{cr36}}{%endif%}{% if m6 == t46 %}Classroom {{cr46}}{%endif%}{% if m6 == t56 %}Classroom {{cr56}}{%endif%}{% if m6 == t66 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{s1}}</td>
+    <td>{% if s1 == t1 %}Classroom {{cr1}}{%endif%}{% if s1 == t2 %}Classroom {{cr2}}{%endif%}{% if s1 == t3 %}Classroom {{cr3}}{%endif%}{% if s1 == t4 %}Classroom {{cr4}}{%endif%}{% if s1 == t5 %}Classroom {{cr5}}{%endif%}{% if s1 == t6 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if s1 == t12 %}Classroom {{cr12}}{%endif%}{% if s1 == t22 %}Classroom {{cr22}}{%endif%}{% if s1 == t32 %}Classroom {{cr32}}{%endif%}{% if s1 == t42 %}Classroom {{cr42}}{%endif%}{% if s1 == t52 %}Classroom {{cr52}}{%endif%}{% if s1 == t62 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if s1 == t13 %}Classroom {{cr13}}{%endif%}{% if s1 == t23 %}Classroom {{cr23}}{%endif%}{% if s1 == t33 %}Classroom {{cr33}}{%endif%}{% if s1 == t43 %}Classroom {{cr43}}{%endif%}{% if s1 == t53 %}Classroom {{cr53}}{%endif%}{% if s1 == t63 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if s1 == t14 %}Classroom {{cr14}}{%endif%}{% if s1 == t24 %}Classroom {{cr24}}{%endif%}{% if s1 == t34 %}Classroom {{cr34}}{%endif%}{% if s1 == t44 %}Classroom {{cr44}}{%endif%}{% if s1 == t54 %}Classroom {{cr54}}{%endif%}{% if s1 == t64 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if s1 == t15 %}Classroom {{cr15}}{%endif%}{% if s1 == t25 %}Classroom {{cr25}}{%endif%}{% if s1 == t35 %}Classroom {{cr35}}{%endif%}{% if s1 == t45 %}Classroom {{cr45}}{%endif%}{% if s1 == t55 %}Classroom {{cr55}}{%endif%}{% if s1 == t65 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if s1 == t16 %}Classroom {{cr16}}{%endif%}{% if s1 == t26 %}Classroom {{cr26}}{%endif%}{% if s1 == t36 %}Classroom {{cr36}}{%endif%}{% if s1 == t46 %}Classroom {{cr46}}{%endif%}{% if s1 == t56 %}Classroom {{cr56}}{%endif%}{% if s1 == t66 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{s2}}</td>
+    <td>{% if s2 == t1 %}Classroom {{cr1}}{%endif%}{% if s2 == t2 %}Classroom {{cr2}}{%endif%}{% if s2 == t3 %}Classroom {{cr3}}{%endif%}{% if s2 == t4 %}Classroom {{cr4}}{%endif%}{% if s2 == t5 %}Classroom {{cr5}}{%endif%}{% if s2 == t6 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if s2 == t12 %}Classroom {{cr12}}{%endif%}{% if s2 == t22 %}Classroom {{cr22}}{%endif%}{% if s2 == t32 %}Classroom {{cr32}}{%endif%}{% if s2 == t42 %}Classroom {{cr42}}{%endif%}{% if s2 == t52 %}Classroom {{cr52}}{%endif%}{% if s2 == t62 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if s2 == t13 %}Classroom {{cr13}}{%endif%}{% if s2 == t23 %}Classroom {{cr23}}{%endif%}{% if s2 == t33 %}Classroom {{cr33}}{%endif%}{% if s2 == t43 %}Classroom {{cr43}}{%endif%}{% if s2 == t53 %}Classroom {{cr53}}{%endif%}{% if s2 == t63 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if s2 == t14 %}Classroom {{cr14}}{%endif%}{% if s2 == t24 %}Classroom {{cr24}}{%endif%}{% if s2 == t34 %}Classroom {{cr34}}{%endif%}{% if s2 == t44 %}Classroom {{cr44}}{%endif%}{% if s2 == t54 %}Classroom {{cr54}}{%endif%}{% if s2 == t64 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if s2 == t15 %}Classroom {{cr15}}{%endif%}{% if s2 == t25 %}Classroom {{cr25}}{%endif%}{% if s2 == t35 %}Classroom {{cr35}}{%endif%}{% if s2 == t45 %}Classroom {{cr45}}{%endif%}{% if s2 == t55 %}Classroom {{cr55}}{%endif%}{% if s2 == t65 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if s2 == t16 %}Classroom {{cr16}}{%endif%}{% if s2 == t26 %}Classroom {{cr26}}{%endif%}{% if s2 == t36 %}Classroom {{cr36}}{%endif%}{% if s2 == t46 %}Classroom {{cr46}}{%endif%}{% if s2 == t56 %}Classroom {{cr56}}{%endif%}{% if s2 == t66 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{s3}}</td>
+    <td>{% if s3 == t1 %}Classroom {{cr1}}{%endif%}{% if s3 == t2 %}Classroom {{cr2}}{%endif%}{% if s3 == t3 %}Classroom {{cr3}}{%endif%}{% if s3 == t4 %}Classroom {{cr4}}{%endif%}{% if s3 == t5 %}Classroom {{cr5}}{%endif%}{% if s3 == t6 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if s3 == t12 %}Classroom {{cr12}}{%endif%}{% if s3 == t22 %}Classroom {{cr22}}{%endif%}{% if s3 == t32 %}Classroom {{cr32}}{%endif%}{% if s3 == t42 %}Classroom {{cr42}}{%endif%}{% if s3 == t52 %}Classroom {{cr52}}{%endif%}{% if s3 == t62 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if s3 == t13 %}Classroom {{cr13}}{%endif%}{% if s3 == t23 %}Classroom {{cr23}}{%endif%}{% if s3 == t33 %}Classroom {{cr33}}{%endif%}{% if s3 == t43 %}Classroom {{cr43}}{%endif%}{% if s3 == t53 %}Classroom {{cr53}}{%endif%}{% if s3 == t63 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if s3 == t14 %}Classroom {{cr14}}{%endif%}{% if s3 == t24 %}Classroom {{cr24}}{%endif%}{% if s3 == t34 %}Classroom {{cr34}}{%endif%}{% if s3 == t44 %}Classroom {{cr44}}{%endif%}{% if s3 == t54 %}Classroom {{cr54}}{%endif%}{% if s3 == t64 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if s3 == t15 %}Classroom {{cr15}}{%endif%}{% if s3 == t25 %}Classroom {{cr25}}{%endif%}{% if s3 == t35 %}Classroom {{cr35}}{%endif%}{% if s3 == t45 %}Classroom {{cr45}}{%endif%}{% if s3 == t55 %}Classroom {{cr55}}{%endif%}{% if s3 == t65 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if s3 == t16 %}Classroom {{cr16}}{%endif%}{% if s3 == t26 %}Classroom {{cr26}}{%endif%}{% if s3 == t36 %}Classroom {{cr36}}{%endif%}{% if s3 == t46 %}Classroom {{cr46}}{%endif%}{% if s3 == t56 %}Classroom {{cr56}}{%endif%}{% if s3 == t66 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+</tbody>
+</table>
+<br><br>
+
+  <h2>Teacher's Attendance </h2>
+  <table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed;width: 698px">
+  <colgroup>
+    <col style="width: 420px">
+    <col style="width: 300px">
+  </colgroup>
+<thead>
+  <tr>
+    <th><h2>Teachers Name</h2></th>
+    <th><h2>Signature</h2></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>{{m1}}</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>{{m2}}</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>{{m3}}</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>{{m4}}</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>{{m5}}</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>{{m6}}</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>{{s1}}</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>{{s2}}</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>{{s3}}</td>
+    <td> </td>
+  </tr>
+</tbody>
+</table>
+
+
+</div>
+<p align="center">
+<button align="center" onclick="printc('div1')">Print</button>
+</p>
 
 
 {% endblock %}

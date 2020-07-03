@@ -9,9 +9,6 @@
   </form>
  </div>
 
-
-      
-
     <form class="" action="generate3" method="post">
       <br><br><br><br>
       {% csrf_token %}
@@ -19,47 +16,167 @@
           <legend>Details set1:</legend>
             <p>
 
-          <label for="subject">Dept name:</label>
-          <input type="text" name="dep" value="" required>
+          <label for="subject">Dept name :</label>
+          <input type="text" name="dep" value="" required><br><br>
+          <label for="eo">Semester :</label>
+          <input type="text" name="eo" value="" required><br><br>
+          <label for="unit">Unit Test :</label>
+          <input type="text" name="unit" value="" required><br><br>
+
         </p>
+        {%if num >= '1'%}
+        {%if num != '1'%}
+        <p>For First Exam</p>
+        {%endif%}
         <p>
           <label for="">Exam date</label>
-          <input type="date" name="date" value="" required>
+          <input type="date" name="date1" value="" required>
         </p>
         <p>
           <label for="time">Time :</label>
-          <input type="text" name="time" value="" required>
+          <input type="text" name="time1" value="" required>
         </p>
         <p>
-          <label for="subject1">SE subject:</label>
-          <input type="text" name="subject1" value="" required>
+          <label for="subject1">{{z1}} subject:</label>
+          <input type="text" name="subject11" value="" required>
+        </p>
+        <label for="li">Available classroom no:</label><br>
+        <input type="text" name="l11" required>
+        <input type="text" name="l21" required>
+        <input type="text" name="l31" required>
+        <input type="text" name="l41" required>
+        <input type="text" name="l51" required>
+        <input type="text" name="l61" required>
+        {%endif%}
+
+        {%if num >= '2'%}
+        <p>For Second Exam</p>
+        <p>
+          <label for="">Exam date</label>
+          <input type="date" name="date2" value="" required>
         </p>
         <p>
-          <label for="subject3">BE subject:</label>
-          <input type="text" name="subject3" value="" required>
+          <label for="time">Time :</label>
+          <input type="text" name="time2" value="" required>
         </p>
+        <p>
+          <label for="subject1">{{z1}} subject:</label>
+          <input type="text" name="subject12" value="" required>
+        </p>
+        <label for="li">Available classroom no:</label><br>
+        <input type="text" name="l12" required>
+        <input type="text" name="l22" required>
+        <input type="text" name="l32" required>
+        <input type="text" name="l42" required>
+        <input type="text" name="l52" required>
+        <input type="text" name="l62" required>
+        {%endif%}
+
+        {%if num >= '3'%}
+        <p>For Third Exam</p>
+        <p>
+          <label for="">Exam date</label>
+          <input type="date" name="date3" value="" required>
+        </p>
+        <p>
+          <label for="time">Time :</label>
+          <input type="text" name="time3" value="" required>
+        </p>
+        <p>
+          <label for="subject1">{{z1}} subject:</label>
+          <input type="text" name="subject13" value="" required>
+        </p>
+        <label for="li">Available classroom no:</label><br>
+        <input type="text" name="l13" required>
+        <input type="text" name="l23" required>
+        <input type="text" name="l33" required>
+        <input type="text" name="l43" required>
+        <input type="text" name="l53" required>
+        <input type="text" name="l63" required>
+        {%endif%}
+
+        {%if num >= '4'%}
+        <p>For Fourth Exam</p>
+        <p>
+          <label for="">Exam date</label>
+          <input type="date" name="date4" value="" required>
+        </p>
+        <p>
+          <label for="time">Time :</label>
+          <input type="text" name="time4" value="" required>
+        </p>
+        <p>
+          <label for="subject1">{{z1}} subject:</label>
+          <input type="text" name="subject14" value="" required>
+        </p>
+        <label for="li">Available classroom no:</label><br>
+        <input type="text" name="l14" required>
+        <input type="text" name="l24" required>
+        <input type="text" name="l34" required>
+        <input type="text" name="l44" required>
+        <input type="text" name="l54" required>
+        <input type="text" name="l64" required>
+        {%endif%}
+
+
+        {%if num >= '5'%}
+        <p>For Fifth Exam</p>
+        <p>
+          <label for="">Exam date</label>
+          <input type="date" name="date5" value="" required>
+        </p>
+        <p>
+          <label for="time">Time :</label>
+          <input type="text" name="time5" value="" required>
+        </p>
+        <p>
+          <label for="subject1">{{z1}} subject:</label>
+          <input type="text" name="subject15" value="" required>
+        </p>
+        <label for="li">Available classroom no:</label><br>
+        <input type="text" name="l15" required>
+        <input type="text" name="l25" required>
+        <input type="text" name="l35" required>
+        <input type="text" name="l45" required>
+        <input type="text" name="l55" required>
+        <input type="text" name="l65" required>
+        {%endif%}
+
+        {%if num >= '6'%}
+        <p>For Sixth Exam</p>
+        <p>
+          <label for="">Exam date</label>
+          <input type="date" name="date6" value="" required>
+        </p>
+        <p>
+          <label for="time">Time :</label>
+          <input type="text" name="time6" value="" required>
+        </p>
+        <p>
+          <label for="subject1">{{z1}} subject:</label>
+          <input type="text" name="subject16" value="" required>
+        </p>
+        <label for="li">Available classroom no:</label><br>
+        <input type="text" name="l16" required>
+        <input type="text" name="l26" required>
+        <input type="text" name="l36" required>
+        <input type="text" name="l46" required>
+        <input type="text" name="l56" required>
+        <input type="text" name="l66" required>
+        {%endif%}
+
       </fieldset>
 
       <fieldset class="details_set2">
             <legend>Details_set2:</legend>
             <p>
           <label for="number">Number of students:</label></p><br>
-          <input type="text" name="sSEA" value="" placeholder="No. of SE A" required>
-        <!--  <input type="text" name="eSEA" value="" placeholder="Ending No. of SE A" required>-->
-          <input type="text" name="sSEB" value="" placeholder="No. of SE B" required>
-        <!--  <input type="text" name="eSEB" value="" placeholder="Ending No. of SE B" required>-->
-          <input type="text" name="sBEA" value="" placeholder="No. of BE A" required>
-      <!--    <input type="text" name="eBEA" value="" placeholder="Ending No. of BE A" required>-->
-          <input type="text" name="sBEB" value="" placeholder="No. of BE B" required>
-      <!--    <input type="text" name="eBEB" value="" placeholder="Ending No. of BEB" required>-->
+          <input type="text" name="sSEA" value="" placeholder="No. of {{z1}} A" required>
+
+          <input type="text" name="sSEB" value="" placeholder="No. of {{z1}} B" required>
+
         <p>
-            <label for="li">Available classroom no:</label></p><br>
-            <input type="text" name="l1" required>
-            <input type="text" name="l2" required>
-            <input type="text" name="l3" required>
-            <input type="text" name="l4" required>
-            <input type="text" name="l5" required>
-            <input type="text" name="l6" required>
+
           <p>
           <label for="li">Teacher (M):</label></p>
           <input type="text" name="m1" required>
@@ -68,21 +185,14 @@
           <input type="text" name="m4" required>
           <input type="text" name="m5" required>
           <input type="text" name="m6" required>
-          <input type="text" name="m7" required>
-          <input type="text" name="m8" required>
-          <input type="text" name="m9" required>
-          <input type="text" name="m10" required>
-          <input type="text" name="m11" required>
-          <input type="text" name="m12" required>
 
           <p>
           <label for="li">Teacher (S):</label></p>
           <input type="text" name="s1" required>
           <input type="text" name="s2" required>
           <input type="text" name="s3" required>
-          <input type="text" name="s4" required>
-          <input type="text" name="s5" required>
-          <input type="text" name="s6" required>
+          <input type="hidden" id="custId" name="z1" value={{z1}}>
+          <input type="hidden" id="custId" name="num" value={{num}}>
 </fieldset>
 <h2 align=center>
         <input type="submit" name="generate" value="GenerateArrangement">

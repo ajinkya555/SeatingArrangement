@@ -31,11 +31,19 @@ table, th, td {
 <div id="div1">
 
 
-Department: {{dep}}
-<br>
-Subjects:<br>
-SE: {{sub1}}<br>
-TE: {{sub2}}
+  <h2>
+  Department : {{dep}}<br>
+  Semester : {{eo}}<br>
+  Unit Test : {{unit}}<br>
+  </h2>
+  {%if num > 1%}
+  <h2>First Subject</h2>
+  {%endif%}
+  <br>
+  Subjects:<br>
+  {{z1}}: {{sub1}}<br>
+  {{z2}}: {{sub2}}
+
 
 <br>
 <table class="tg" align=center style="text-align:center">
@@ -55,56 +63,56 @@ TE: {{sub2}}
     <td class="tg-0pky" rowspan="12"><h3>Date: {{date}}<br>
     Time: {{time}}</h3></td>
     <td class="tg-0lax" rowspan="2">{{cr1}}</td>
-    <td class="tg-0lax">SE {{div0}}</td>
+    <td class="tg-0lax">{{z1}} {{div0}}</td>
     <td class="tg-0lax">{{sa3}}</td>
   </tr>
   <tr>
-    <td class="tg-0lax">TE {{div1}}</td>
+    <td class="tg-0lax">{{z2}}  {{div1}}</td>
     <td class="tg-0lax">{{tb2}}</td>
   </tr>
   <tr>
     <td class="tg-0lax" rowspan="2">{{cr2}}</td>
-    <td class="tg-0lax">SE {{div0}}</td>
+    <td class="tg-0lax">{{z1}} {{div0}}</td>
     <td class="tg-0lax">{{sa1}}</td>
   </tr>
   <tr>
-    <td class="tg-0lax">TE {{div1}}</td>
+    <td class="tg-0lax">{{z2}}  {{div1}}</td>
     <td class="tg-0lax">{{tb3}}</td>
   </tr>
   <tr>
     <td class="tg-0lax" rowspan="2">{{cr3}}</td>
-    <td class="tg-0lax">SE {{div0}}</td>
+    <td class="tg-0lax">{{z1}} {{div0}}</td>
     <td class="tg-0lax">{{sa2}}</td>
   </tr>
   <tr>
-    <td class="tg-0lax">TE {{div1}}</td>
+    <td class="tg-0lax">{{z2}}  {{div1}}</td>
     <td class="tg-0lax">{{tb1}}</td>
   </tr>
   <tr>
     <td class="tg-0lax" rowspan="2">{{cr4}}</td>
-    <td class="tg-0lax">SE {{div1}}</td>
+    <td class="tg-0lax">{{z1}} {{div1}}</td>
     <td class="tg-0lax">{{sb1}}</td>
   </tr>
   <tr>
-    <td class="tg-0lax">TE {{div0}}</td>
+    <td class="tg-0lax">{{z2}}  {{div0}}</td>
     <td class="tg-0lax">{{ta1}}</td>
   </tr>
   <tr>
     <td class="tg-0lax" rowspan="2">{{cr5}}</td>
-    <td class="tg-0lax">SE {{div1}}</td>
+    <td class="tg-0lax">{{z1}} {{div1}}</td>
     <td class="tg-0lax">{{sb2}}</td>
   </tr>
   <tr>
-    <td class="tg-0lax">TE {{div0}}</td>
+    <td class="tg-0lax">{{z2}}  {{div0}}</td>
     <td class="tg-0lax">{{ta3}}</td>
   </tr>
   <tr>
     <td class="tg-0lax" rowspan="2">{{cr6}}</td>
-    <td class="tg-0lax">SE {{div1}}</td>
+    <td class="tg-0lax">{{z1}} {{div1}}</td>
     <td class="tg-0lax">{{sb3}}</td>
   </tr>
   <tr>
-    <td class="tg-0lax">TE {{div0}}</td>
+    <td class="tg-0lax">{{z2}}  {{div0}}</td>
     <td class="tg-0lax">{{ta2}}</td>
   </tr>
 </table>
@@ -165,6 +173,1041 @@ TE: {{sub2}}
 </table>
 
 <br>
+  {% if num >= 2 %}
+  <br>
+  <h2>Second Subject</h2>
+  Subjects:<br>
+  {{z1}}: {{sub12}}<br>
+  {{z2}}: {{sub22}}<br>
+  <table class="tg" align=center style="text-align:center">
+    <colgroup>
+    <col style="width: 400px">
+    <col style="width: 250px">
+    <col style="width: 150px">
+    <col style="width: 150px">
+    </colgroup>
+    <tr>
+      <th class="tg-0pky"><h2>Time & Date</h2></th>
+      <th class="tg-0lax"><h2>Classroom</h2></th>
+      <th class="tg-0lax"><h2>Class</h2></th>
+      <th class="tg-0lax"><h2>Roll No.</h2></th>
+    </tr>
+    <tr>
+      <td class="tg-0pky" rowspan="12"><h3>Date: {{date2}}<br>
+      Time: {{time2}}</h3></td>
+      <td class="tg-0lax" rowspan="2">{{cr12}}</td>
+      <td class="tg-0lax">{{z1}} {{div0}}</td>
+      <td class="tg-0lax">{{sa32}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div1}}</td>
+      <td class="tg-0lax">{{tb22}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr22}}</td>
+      <td class="tg-0lax">{{z1}} {{div0}}</td>
+      <td class="tg-0lax">{{sa12}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div1}}</td>
+      <td class="tg-0lax">{{tb32}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr32}}</td>
+      <td class="tg-0lax">{{z1}} {{div0}}</td>
+      <td class="tg-0lax">{{sa22}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div1}}</td>
+      <td class="tg-0lax">{{tb12}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr42}}</td>
+      <td class="tg-0lax">{{z1}} {{div1}}</td>
+      <td class="tg-0lax">{{sb12}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div0}}</td>
+      <td class="tg-0lax">{{ta12}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr52}}</td>
+      <td class="tg-0lax">{{z1}} {{div1}}</td>
+      <td class="tg-0lax">{{sb22}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div0}}</td>
+      <td class="tg-0lax">{{ta32}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr62}}</td>
+      <td class="tg-0lax">{{z1}} {{div1}}</td>
+      <td class="tg-0lax">{{sb32}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div0}}</td>
+      <td class="tg-0lax">{{ta22}}</td>
+    </tr>
+  </table>
+<br><br>
+  <table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed; width: 551px">
+  <colgroup>
+  <col style="width: 400px">
+  <col style="width: 151px">
+  </colgroup>
+    <tr>
+      <th class="tg-0a7q">Teachers</th>
+      <th class="tg-lboi">Classroom</th>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t1_2}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr12}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t2_2}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t3_2}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr22}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t4_2}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t5_2}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr32}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t6_2}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t7_2}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr42}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t8_2}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t9_2}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr52}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t10_2}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t11_2}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr62}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t12_2}}</td>
+    </tr>
+  </table>
+
+  {%endif%}
+
+<br>
+
+<br>
+  {% if num >= 3 %}
+  <br>
+  <h2>Third Subject</h2>
+  Subjects:<br>
+  {{z1}}: {{sub13}}<br>
+  {{z2}}: {{sub23}}<br>
+  <table class="tg" align=center style="text-align:center">
+    <colgroup>
+    <col style="width: 400px">
+    <col style="width: 250px">
+    <col style="width: 150px">
+    <col style="width: 150px">
+    </colgroup>
+    <tr>
+      <th class="tg-0pky"><h2>Time & Date</h2></th>
+      <th class="tg-0lax"><h2>Classroom</h2></th>
+      <th class="tg-0lax"><h2>Class</h2></th>
+      <th class="tg-0lax"><h2>Roll No.</h2></th>
+    </tr>
+    <tr>
+      <td class="tg-0pky" rowspan="12"><h3>Date: {{date3}}<br>
+      Time: {{time3}}</h3></td>
+      <td class="tg-0lax" rowspan="2">{{cr13}}</td>
+      <td class="tg-0lax">{{z1}} {{div0}}</td>
+      <td class="tg-0lax">{{sa33}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div1}}</td>
+      <td class="tg-0lax">{{tb23}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr23}}</td>
+      <td class="tg-0lax">{{z1}} {{div0}}</td>
+      <td class="tg-0lax">{{sa13}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div1}}</td>
+      <td class="tg-0lax">{{tb33}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr33}}</td>
+      <td class="tg-0lax">{{z1}} {{div0}}</td>
+      <td class="tg-0lax">{{sa23}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div1}}</td>
+      <td class="tg-0lax">{{tb13}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr43}}</td>
+      <td class="tg-0lax">{{z1}} {{div1}}</td>
+      <td class="tg-0lax">{{sb13}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div0}}</td>
+      <td class="tg-0lax">{{ta13}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr53}}</td>
+      <td class="tg-0lax">{{z1}} {{div1}}</td>
+      <td class="tg-0lax">{{sb23}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div0}}</td>
+      <td class="tg-0lax">{{ta33}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr63}}</td>
+      <td class="tg-0lax">{{z1}} {{div1}}</td>
+      <td class="tg-0lax">{{sb33}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div0}}</td>
+      <td class="tg-0lax">{{ta23}}</td>
+    </tr>
+  </table>
+<br><br>
+  <table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed; width: 551px">
+  <colgroup>
+  <col style="width: 400px">
+  <col style="width: 151px">
+  </colgroup>
+    <tr>
+      <th class="tg-0a7q">Teachers</th>
+      <th class="tg-lboi">Classroom</th>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t1_3}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr13}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t2_3}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t3_3}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr23}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t4_3}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t5_3}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr33}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t6_3}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t7_3}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr43}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t8_3}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t9_3}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr53}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t10_3}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t11_3}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr63}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t12_3}}</td>
+    </tr>
+  </table>
+
+  {%endif%}
+
+<br>
+<br>
+  {% if num >= 4 %}
+  <br>
+  <h2>Fourth Subject</h2>
+  Subjects:<br>
+  {{z1}}: {{sub14}}<br>
+  {{z2}}: {{sub24}}<br>
+  <table class="tg" align=center style="text-align:center">
+    <colgroup>
+    <col style="width: 400px">
+    <col style="width: 250px">
+    <col style="width: 150px">
+    <col style="width: 150px">
+    </colgroup>
+    <tr>
+      <th class="tg-0pky"><h2>Time & Date</h2></th>
+      <th class="tg-0lax"><h2>Classroom</h2></th>
+      <th class="tg-0lax"><h2>Class</h2></th>
+      <th class="tg-0lax"><h2>Roll No.</h2></th>
+    </tr>
+    <tr>
+      <td class="tg-0pky" rowspan="12"><h3>Date: {{date4}}<br>
+      Time: {{time4}}</h3></td>
+      <td class="tg-0lax" rowspan="2">{{cr14}}</td>
+      <td class="tg-0lax">{{z1}} {{div0}}</td>
+      <td class="tg-0lax">{{sa34}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div1}}</td>
+      <td class="tg-0lax">{{tb24}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr24}}</td>
+      <td class="tg-0lax">{{z1}} {{div0}}</td>
+      <td class="tg-0lax">{{sa14}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div1}}</td>
+      <td class="tg-0lax">{{tb34}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr34}}</td>
+      <td class="tg-0lax">{{z1}} {{div0}}</td>
+      <td class="tg-0lax">{{sa24}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div1}}</td>
+      <td class="tg-0lax">{{tb14}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr44}}</td>
+      <td class="tg-0lax">{{z1}} {{div1}}</td>
+      <td class="tg-0lax">{{sb14}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div0}}</td>
+      <td class="tg-0lax">{{ta14}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr54}}</td>
+      <td class="tg-0lax">{{z1}} {{div1}}</td>
+      <td class="tg-0lax">{{sb24}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div0}}</td>
+      <td class="tg-0lax">{{ta34}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr64}}</td>
+      <td class="tg-0lax">{{z1}} {{div1}}</td>
+      <td class="tg-0lax">{{sb34}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div0}}</td>
+      <td class="tg-0lax">{{ta24}}</td>
+    </tr>
+  </table>
+<br><br>
+  <table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed; width: 551px">
+  <colgroup>
+  <col style="width: 400px">
+  <col style="width: 151px">
+  </colgroup>
+    <tr>
+      <th class="tg-0a7q">Teachers</th>
+      <th class="tg-lboi">Classroom</th>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t1_4}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr14}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t2_4}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t3_4}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr24}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t4_4}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t5_4}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr34}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t6_4}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t7_4}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr44}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t8_4}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t9_4}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr54}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t10_4}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t11_4}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr64}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t12_4}}</td>
+    </tr>
+  </table>
+
+  {%endif%}
+
+<br>
+<br>
+  {% if num >= 5 %}
+  <br>
+  <h2>Fifth Subject</h2>
+  Subjects:<br>
+  {{z1}}: {{sub15}}<br>
+  {{z2}}: {{sub25}}<br>
+  <table class="tg" align=center style="text-align:center">
+    <colgroup>
+    <col style="width: 400px">
+    <col style="width: 250px">
+    <col style="width: 150px">
+    <col style="width: 150px">
+    </colgroup>
+    <tr>
+      <th class="tg-0pky"><h2>Time & Date</h2></th>
+      <th class="tg-0lax"><h2>Classroom</h2></th>
+      <th class="tg-0lax"><h2>Class</h2></th>
+      <th class="tg-0lax"><h2>Roll No.</h2></th>
+    </tr>
+    <tr>
+      <td class="tg-0pky" rowspan="12"><h3>Date: {{date5}}<br>
+      Time: {{time5}}</h3></td>
+      <td class="tg-0lax" rowspan="2">{{cr15}}</td>
+      <td class="tg-0lax">{{z1}} {{div0}}</td>
+      <td class="tg-0lax">{{sa35}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div1}}</td>
+      <td class="tg-0lax">{{tb25}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr25}}</td>
+      <td class="tg-0lax">{{z1}} {{div0}}</td>
+      <td class="tg-0lax">{{sa15}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div1}}</td>
+      <td class="tg-0lax">{{tb35}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr35}}</td>
+      <td class="tg-0lax">{{z1}} {{div0}}</td>
+      <td class="tg-0lax">{{sa25}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div1}}</td>
+      <td class="tg-0lax">{{tb15}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr45}}</td>
+      <td class="tg-0lax">{{z1}} {{div1}}</td>
+      <td class="tg-0lax">{{sb15}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div0}}</td>
+      <td class="tg-0lax">{{ta15}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr55}}</td>
+      <td class="tg-0lax">{{z1}} {{div1}}</td>
+      <td class="tg-0lax">{{sb25}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div0}}</td>
+      <td class="tg-0lax">{{ta35}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr65}}</td>
+      <td class="tg-0lax">{{z1}} {{div1}}</td>
+      <td class="tg-0lax">{{sb35}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div0}}</td>
+      <td class="tg-0lax">{{ta25}}</td>
+    </tr>
+  </table>
+<br><br>
+  <table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed; width: 551px">
+  <colgroup>
+  <col style="width: 400px">
+  <col style="width: 151px">
+  </colgroup>
+    <tr>
+      <th class="tg-0a7q">Teachers</th>
+      <th class="tg-lboi">Classroom</th>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t1_5}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr15}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t2_5}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t3_5}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr25}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t4_5}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t5_5}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr35}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t6_5}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t7_5}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr45}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t8_5}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t9_5}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr55}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t10_5}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t11_5}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr65}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t12_5}}</td>
+    </tr>
+  </table>
+
+  {%endif%}
+
+<br>
+<br>
+  {% if num >= 6 %}
+  <br>
+  <h2>Sixth Subject</h2>
+  Subjects:<br>
+  {{z1}}: {{sub16}}<br>
+  {{z2}}: {{sub26}}<br>
+  <table class="tg" align=center style="text-align:center">
+    <colgroup>
+    <col style="width: 400px">
+    <col style="width: 250px">
+    <col style="width: 150px">
+    <col style="width: 150px">
+    </colgroup>
+    <tr>
+      <th class="tg-0pky"><h2>Time & Date</h2></th>
+      <th class="tg-0lax"><h2>Classroom</h2></th>
+      <th class="tg-0lax"><h2>Class</h2></th>
+      <th class="tg-0lax"><h2>Roll No.</h2></th>
+    </tr>
+    <tr>
+      <td class="tg-0pky" rowspan="12"><h3>Date: {{date6}}<br>
+      Time: {{time6}}</h3></td>
+      <td class="tg-0lax" rowspan="2">{{cr16}}</td>
+      <td class="tg-0lax">{{z1}} {{div0}}</td>
+      <td class="tg-0lax">{{sa36}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div1}}</td>
+      <td class="tg-0lax">{{tb26}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr26}}</td>
+      <td class="tg-0lax">{{z1}} {{div0}}</td>
+      <td class="tg-0lax">{{sa16}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div1}}</td>
+      <td class="tg-0lax">{{tb36}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr36}}</td>
+      <td class="tg-0lax">{{z1}} {{div0}}</td>
+      <td class="tg-0lax">{{sa26}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div1}}</td>
+      <td class="tg-0lax">{{tb16}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr46}}</td>
+      <td class="tg-0lax">{{z1}} {{div1}}</td>
+      <td class="tg-0lax">{{sb16}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div0}}</td>
+      <td class="tg-0lax">{{ta16}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr56}}</td>
+      <td class="tg-0lax">{{z1}} {{div1}}</td>
+      <td class="tg-0lax">{{sb26}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div0}}</td>
+      <td class="tg-0lax">{{ta36}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" rowspan="2">{{cr66}}</td>
+      <td class="tg-0lax">{{z1}} {{div1}}</td>
+      <td class="tg-0lax">{{sb36}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">{{z2}}  {{div0}}</td>
+      <td class="tg-0lax">{{ta26}}</td>
+    </tr>
+  </table>
+<br><br>
+  <table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed; width: 551px">
+  <colgroup>
+  <col style="width: 400px">
+  <col style="width: 151px">
+  </colgroup>
+    <tr>
+      <th class="tg-0a7q">Teachers</th>
+      <th class="tg-lboi">Classroom</th>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t1_6}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr16}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t2_6}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t3_6}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr26}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t4_6}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t5_6}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr36}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t6_6}}</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">{{t7_6}}</td>
+      <td class="tg-lboi" rowspan="2">{{cr46}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t8_6}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t9_6}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr56}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t10_6}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t11_6}}</td>
+      <td class="tg-0pky" rowspan="2">{{cr66}}</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">{{t12_6}}</td>
+    </tr>
+  </table>
+
+  {%endif%}
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br>
+  <h2>Teacher's Duty List and Timetable </h2>
+  <table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed;width: 698px">
+  <colgroup>
+    <col style="width: 420px">
+    <col style="width: 300px">
+  </colgroup>
+<thead>
+  <tr>
+    <th><h2>Teachers Name</h2></th>
+    <th><h2>Number of Duties</h2></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>{{s1}}</td>
+    <td>{{count1}}</td>
+  </tr>
+  <tr>
+    <td>{{m2}}</td>
+    <td>{{count2}}</td>
+  </tr>
+  <tr>
+    <td>{{m3}}</td>
+    <td>{{count3}}</td>
+  </tr>
+  <tr>
+    <td>{{m4}}</td>
+    <td>{{count4}}</td>
+  </tr>
+  <tr>
+    <td>{{m5}}</td>
+    <td>{{count5}}</td>
+  </tr>
+  <tr>
+    <td>{{m6}}</td>
+    <td>{{count6}}</td>
+  </tr>
+  <tr>
+    <td>{{m7}}</td>
+    <td>{{count7}}</td>
+  </tr>
+  <tr>
+    <td>{{m8}}</td>
+    <td>{{count8}}</td>
+  </tr>
+  <tr>
+    <td>{{m9}}</td>
+    <td>{{count9}}</td>
+  </tr>
+  <tr>
+    <td>{{m10}}</td>
+    <td>{{count10}}</td>
+  </tr>
+  <tr>
+    <td>{{m11}}</td>
+    <td>{{count11}}</td>
+  </tr>
+  <tr>
+    <td>{{m12}}</td>
+    <td>{{count12}}</td>
+  </tr>
+  <tr>
+    <td>{{s1}}</td>
+    <td>{{count13}}</td>
+  </tr>
+  <tr>
+    <td>{{s2}}</td>
+    <td>{{count14}}</td>
+  </tr>
+  <tr>
+    <td>{{s3}}</td>
+    <td>{{count15}}</td>
+  </tr>
+  <tr>
+    <td>{{s4}}</td>
+    <td>{{count16}}</td>
+  </tr>
+  <tr>
+    <td>{{s5}}</td>
+    <td>{{count17}}</td>
+  </tr>
+  <tr>
+    <td>{{s6}}</td>
+    <td>{{count18}}</td>
+  </tr>
+</tbody>
+</table>
+
+<br>
+<table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed; width: 1355px">
+<colgroup>
+<col style="width: 298px">
+<col style="width: 184px">
+<col style="width: 170px">
+<col style="width: 161px">
+<col style="width: 178px">
+<col style="width: 174px">
+<col style="width: 190px">
+</colgroup>
+<thead>
+  <tr>
+    <th><h2>Teacher Name</h2></th>
+    <th>{{date}} and {{time}}</th>
+    {% if num >= 2 %}<th>{{date2}} and {{time2}}</th>{%endif%}
+    {% if num >= 3 %}<th>{{date3}} and {{time3}}</th>{%endif%}
+    {% if num >= 4 %}<th>{{date4}} and {{time4}}</th>{%endif%}
+    {% if num >= 5 %}<th>{{date5}} and {{time5}}</th>{%endif%}
+    {% if num >= 6 %}<th>{{date6}} and {{time6}}</th>{%endif%}
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>{{m1}}</td>
+    <td>{% if m1 == t1 %}Classroom {{cr1}}{%endif%}{% if m1 == t2 %}Classroom {{cr1}}{%endif%}{% if m1 == t3 %}Classroom {{cr2}}{%endif%}{% if m1 == t4 %}Classroom {{cr2}}{%endif%}{% if m1 == t5 %}Classroom {{cr3}}{%endif%}{% if m1 == t6 %}Classroom {{cr3}}{%endif%}{% if m1 == t7 %}Classroom {{cr4}}{%endif%}{% if m1 == t8 %}Classroom {{cr4}}{%endif%}{% if m1 == t9 %}Classroom {{cr5}}{%endif%}{% if m1 == t10 %}Classroom {{cr5}}{%endif%}{% if m1 == t11 %}Classroom {{cr6}}{%endif%}{% if m1 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m1 == t1_2 %}Classroom {{cr12}}{%endif%}{% if m1 == t2_2 %}Classroom {{cr12}}{%endif%}{% if m1 == t3_2 %}Classroom {{cr22}}{%endif%}{% if m1 == t4_2 %}Classroom {{cr22}}{%endif%}{% if m1 == t5_2 %}Classroom {{cr32}}{%endif%}{% if m1 == t6_2 %}Classroom {{cr32}}{%endif%}{% if m1 == t7_2 %}Classroom {{cr42}}{%endif%}{% if m1 == t8_2 %}Classroom {{cr42}}{%endif%}{% if m1 == t9_2 %}Classroom {{cr52}}{%endif%}{% if m1 == t10_2 %}Classroom {{cr52}}{%endif%}{% if m1 == t11_2 %}Classroom {{cr62}}{%endif%}{% if m1 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m1 == t1_3 %}Classroom {{cr13}}{%endif%}{% if m1 == t2_3 %}Classroom {{cr13}}{%endif%}{% if m1 == t3_3 %}Classroom {{cr23}}{%endif%}{% if m1 == t4_3 %}Classroom {{cr23}}{%endif%}{% if m1 == t5_3 %}Classroom {{cr33}}{%endif%}{% if m1 == t6_3 %}Classroom {{cr33}}{%endif%}{% if m1 == t7_3 %}Classroom {{cr43}}{%endif%}{% if m1 == t8_3 %}Classroom {{cr43}}{%endif%}{% if m1 == t9_3 %}Classroom {{cr53}}{%endif%}{% if m1 == t10_3 %}Classroom {{cr53}}{%endif%}{% if m1 == t11_3 %}Classroom {{cr63}}{%endif%}{% if m1 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m1 == t1_4 %}Classroom {{cr14}}{%endif%}{% if m1 == t2_4 %}Classroom {{cr14}}{%endif%}{% if m1 == t3_4 %}Classroom {{cr24}}{%endif%}{% if m1 == t4_4 %}Classroom {{cr24}}{%endif%}{% if m1 == t5_4 %}Classroom {{cr34}}{%endif%}{% if m1 == t6_4 %}Classroom {{cr34}}{%endif%}{% if m1 == t7_4 %}Classroom {{cr44}}{%endif%}{% if m1 == t8_4 %}Classroom {{cr44}}{%endif%}{% if m1 == t9_4 %}Classroom {{cr54}}{%endif%}{% if m1 == t10_4 %}Classroom {{cr54}}{%endif%}{% if m1 == t11_4 %}Classroom {{cr64}}{%endif%}{% if m1 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m1 == t1_5 %}Classroom {{cr15}}{%endif%}{% if m1 == t2_5 %}Classroom {{cr15}}{%endif%}{% if m1 == t3_5 %}Classroom {{cr25}}{%endif%}{% if m1 == t4_5 %}Classroom {{cr25}}{%endif%}{% if m1 == t5_5 %}Classroom {{cr35}}{%endif%}{% if m1 == t6_5 %}Classroom {{cr35}}{%endif%}{% if m1 == t7_5 %}Classroom {{cr45}}{%endif%}{% if m1 == t8_5 %}Classroom {{cr45}}{%endif%}{% if m1 == t9_5 %}Classroom {{cr55}}{%endif%}{% if m1 == t10_5 %}Classroom {{cr55}}{%endif%}{% if m1 == t11_5 %}Classroom {{cr65}}{%endif%}{% if m1 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m1 == t1_6 %}Classroom {{cr16}}{%endif%}{% if m1 == t2_6 %}Classroom {{cr16}}{%endif%}{% if m1 == t3_6 %}Classroom {{cr26}}{%endif%}{% if m1 == t4_6 %}Classroom {{cr26}}{%endif%}{% if m1 == t5_6 %}Classroom {{cr36}}{%endif%}{% if m1 == t6_6 %}Classroom {{cr36}}{%endif%}{% if m1 == t7_6 %}Classroom {{cr46}}{%endif%}{% if m1 == t8_6 %}Classroom {{cr46}}{%endif%}{% if m1 == t9_6 %}Classroom {{cr56}}{%endif%}{% if m1 == t10_6 %}Classroom {{cr56}}{%endif%}{% if m1 == t11_6 %}Classroom {{cr66}}{%endif%}{% if m1 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{m2}}</td>
+    <td>{% if m2 == t1 %}Classroom {{cr1}}{%endif%}{% if m2 == t2 %}Classroom {{cr1}}{%endif%}{% if m2 == t3 %}Classroom {{cr2}}{%endif%}{% if m2 == t4 %}Classroom {{cr2}}{%endif%}{% if m2 == t5 %}Classroom {{cr3}}{%endif%}{% if m2 == t6 %}Classroom {{cr3}}{%endif%}{% if m2 == t7 %}Classroom {{cr4}}{%endif%}{% if m2 == t8 %}Classroom {{cr4}}{%endif%}{% if m2 == t9 %}Classroom {{cr5}}{%endif%}{% if m2 == t10 %}Classroom {{cr5}}{%endif%}{% if m2 == t11 %}Classroom {{cr6}}{%endif%}{% if m2 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m2 == t1_2 %}Classroom {{cr12}}{%endif%}{% if m2 == t2_2 %}Classroom {{cr12}}{%endif%}{% if m2 == t3_2 %}Classroom {{cr22}}{%endif%}{% if m2 == t4_2 %}Classroom {{cr22}}{%endif%}{% if m2 == t5_2 %}Classroom {{cr32}}{%endif%}{% if m2 == t6_2 %}Classroom {{cr32}}{%endif%}{% if m2 == t7_2 %}Classroom {{cr42}}{%endif%}{% if m2 == t8_2 %}Classroom {{cr42}}{%endif%}{% if m2 == t9_2 %}Classroom {{cr52}}{%endif%}{% if m2 == t10_2 %}Classroom {{cr52}}{%endif%}{% if m2 == t11_2 %}Classroom {{cr62}}{%endif%}{% if m2 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m2 == t1_3 %}Classroom {{cr13}}{%endif%}{% if m2 == t2_3 %}Classroom {{cr13}}{%endif%}{% if m2 == t3_3 %}Classroom {{cr23}}{%endif%}{% if m2 == t4_3 %}Classroom {{cr23}}{%endif%}{% if m2 == t5_3 %}Classroom {{cr33}}{%endif%}{% if m2 == t6_3 %}Classroom {{cr33}}{%endif%}{% if m2 == t7_3 %}Classroom {{cr43}}{%endif%}{% if m2 == t8_3 %}Classroom {{cr43}}{%endif%}{% if m2 == t9_3 %}Classroom {{cr53}}{%endif%}{% if m2 == t10_3 %}Classroom {{cr53}}{%endif%}{% if m2 == t11_3 %}Classroom {{cr63}}{%endif%}{% if m2 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m2 == t1_4 %}Classroom {{cr14}}{%endif%}{% if m2 == t2_4 %}Classroom {{cr14}}{%endif%}{% if m2 == t3_4 %}Classroom {{cr24}}{%endif%}{% if m2 == t4_4 %}Classroom {{cr24}}{%endif%}{% if m2 == t5_4 %}Classroom {{cr34}}{%endif%}{% if m2 == t6_4 %}Classroom {{cr34}}{%endif%}{% if m2 == t7_4 %}Classroom {{cr44}}{%endif%}{% if m2 == t8_4 %}Classroom {{cr44}}{%endif%}{% if m2 == t9_4 %}Classroom {{cr54}}{%endif%}{% if m2 == t10_4 %}Classroom {{cr54}}{%endif%}{% if m2 == t11_4 %}Classroom {{cr64}}{%endif%}{% if m2 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m2 == t1_5 %}Classroom {{cr15}}{%endif%}{% if m2 == t2_5 %}Classroom {{cr15}}{%endif%}{% if m2 == t3_5 %}Classroom {{cr25}}{%endif%}{% if m2 == t4_5 %}Classroom {{cr25}}{%endif%}{% if m2 == t5_5 %}Classroom {{cr35}}{%endif%}{% if m2 == t6_5 %}Classroom {{cr35}}{%endif%}{% if m2 == t7_5 %}Classroom {{cr45}}{%endif%}{% if m2 == t8_5 %}Classroom {{cr45}}{%endif%}{% if m2 == t9_5 %}Classroom {{cr55}}{%endif%}{% if m2 == t10_5 %}Classroom {{cr55}}{%endif%}{% if m2 == t11_5 %}Classroom {{cr65}}{%endif%}{% if m2 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m2 == t1_6 %}Classroom {{cr16}}{%endif%}{% if m2 == t2_6 %}Classroom {{cr16}}{%endif%}{% if m2 == t3_6 %}Classroom {{cr26}}{%endif%}{% if m2 == t4_6 %}Classroom {{cr26}}{%endif%}{% if m2 == t5_6 %}Classroom {{cr36}}{%endif%}{% if m2 == t6_6 %}Classroom {{cr36}}{%endif%}{% if m2 == t7_6 %}Classroom {{cr46}}{%endif%}{% if m2 == t8_6 %}Classroom {{cr46}}{%endif%}{% if m2 == t9_6 %}Classroom {{cr56}}{%endif%}{% if m2 == t10_6 %}Classroom {{cr56}}{%endif%}{% if m2 == t11_6 %}Classroom {{cr66}}{%endif%}{% if m2 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{m3}}</td>
+    <td>{% if m3 == t1 %}Classroom {{cr1}}{%endif%}{% if m3 == t2 %}Classroom {{cr1}}{%endif%}{% if m3 == t3 %}Classroom {{cr2}}{%endif%}{% if m3 == t4 %}Classroom {{cr2}}{%endif%}{% if m3 == t5 %}Classroom {{cr3}}{%endif%}{% if m3 == t6 %}Classroom {{cr3}}{%endif%}{% if m3 == t7 %}Classroom {{cr4}}{%endif%}{% if m3 == t8 %}Classroom {{cr4}}{%endif%}{% if m3 == t9 %}Classroom {{cr5}}{%endif%}{% if m3 == t10 %}Classroom {{cr5}}{%endif%}{% if m3 == t11 %}Classroom {{cr6}}{%endif%}{% if m3 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m3 == t1_2 %}Classroom {{cr12}}{%endif%}{% if m3 == t2_2 %}Classroom {{cr12}}{%endif%}{% if m3 == t3_2 %}Classroom {{cr22}}{%endif%}{% if m3 == t4_2 %}Classroom {{cr22}}{%endif%}{% if m3 == t5_2 %}Classroom {{cr32}}{%endif%}{% if m3 == t6_2 %}Classroom {{cr32}}{%endif%}{% if m3 == t7_2 %}Classroom {{cr42}}{%endif%}{% if m3 == t8_2 %}Classroom {{cr42}}{%endif%}{% if m3 == t9_2 %}Classroom {{cr52}}{%endif%}{% if m3 == t10_2 %}Classroom {{cr52}}{%endif%}{% if m3 == t11_2 %}Classroom {{cr62}}{%endif%}{% if m3 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m3 == t1_3 %}Classroom {{cr13}}{%endif%}{% if m3 == t2_3 %}Classroom {{cr13}}{%endif%}{% if m3 == t3_3 %}Classroom {{cr23}}{%endif%}{% if m3 == t4_3 %}Classroom {{cr23}}{%endif%}{% if m3 == t5_3 %}Classroom {{cr33}}{%endif%}{% if m3 == t6_3 %}Classroom {{cr33}}{%endif%}{% if m3 == t7_3 %}Classroom {{cr43}}{%endif%}{% if m3 == t8_3 %}Classroom {{cr43}}{%endif%}{% if m3 == t9_3 %}Classroom {{cr53}}{%endif%}{% if m3 == t10_3 %}Classroom {{cr53}}{%endif%}{% if m3 == t11_3 %}Classroom {{cr63}}{%endif%}{% if m3 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m3 == t1_4 %}Classroom {{cr14}}{%endif%}{% if m3 == t2_4 %}Classroom {{cr14}}{%endif%}{% if m3 == t3_4 %}Classroom {{cr24}}{%endif%}{% if m3 == t4_4 %}Classroom {{cr24}}{%endif%}{% if m3 == t5_4 %}Classroom {{cr34}}{%endif%}{% if m3 == t6_4 %}Classroom {{cr34}}{%endif%}{% if m3 == t7_4 %}Classroom {{cr44}}{%endif%}{% if m3 == t8_4 %}Classroom {{cr44}}{%endif%}{% if m3 == t9_4 %}Classroom {{cr54}}{%endif%}{% if m3 == t10_4 %}Classroom {{cr54}}{%endif%}{% if m3 == t11_4 %}Classroom {{cr64}}{%endif%}{% if m3 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m3 == t1_5 %}Classroom {{cr15}}{%endif%}{% if m3 == t2_5 %}Classroom {{cr15}}{%endif%}{% if m3 == t3_5 %}Classroom {{cr25}}{%endif%}{% if m3 == t4_5 %}Classroom {{cr25}}{%endif%}{% if m3 == t5_5 %}Classroom {{cr35}}{%endif%}{% if m3 == t6_5 %}Classroom {{cr35}}{%endif%}{% if m3 == t7_5 %}Classroom {{cr45}}{%endif%}{% if m3 == t8_5 %}Classroom {{cr45}}{%endif%}{% if m3 == t9_5 %}Classroom {{cr55}}{%endif%}{% if m3 == t10_5 %}Classroom {{cr55}}{%endif%}{% if m3 == t11_5 %}Classroom {{cr65}}{%endif%}{% if m3 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m3 == t1_6 %}Classroom {{cr16}}{%endif%}{% if m3 == t2_6 %}Classroom {{cr16}}{%endif%}{% if m3 == t3_6 %}Classroom {{cr26}}{%endif%}{% if m3 == t4_6 %}Classroom {{cr26}}{%endif%}{% if m3 == t5_6 %}Classroom {{cr36}}{%endif%}{% if m3 == t6_6 %}Classroom {{cr36}}{%endif%}{% if m3 == t7_6 %}Classroom {{cr46}}{%endif%}{% if m3 == t8_6 %}Classroom {{cr46}}{%endif%}{% if m3 == t9_6 %}Classroom {{cr56}}{%endif%}{% if m3 == t10_6 %}Classroom {{cr56}}{%endif%}{% if m3 == t11_6 %}Classroom {{cr66}}{%endif%}{% if m3 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{m4}}</td>
+    <td>{% if m4 == t1 %}Classroom {{cr1}}{%endif%}{% if m4 == t2 %}Classroom {{cr1}}{%endif%}{% if m4 == t3 %}Classroom {{cr2}}{%endif%}{% if m4 == t4 %}Classroom {{cr2}}{%endif%}{% if m4 == t5 %}Classroom {{cr3}}{%endif%}{% if m4 == t6 %}Classroom {{cr3}}{%endif%}{% if m4 == t7 %}Classroom {{cr4}}{%endif%}{% if m4 == t8 %}Classroom {{cr4}}{%endif%}{% if m4 == t9 %}Classroom {{cr5}}{%endif%}{% if m4 == t10 %}Classroom {{cr5}}{%endif%}{% if m4 == t11 %}Classroom {{cr6}}{%endif%}{% if m4 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m4 == t1_2 %}Classroom {{cr12}}{%endif%}{% if m4 == t2_2 %}Classroom {{cr12}}{%endif%}{% if m4 == t3_2 %}Classroom {{cr22}}{%endif%}{% if m4 == t4_2 %}Classroom {{cr22}}{%endif%}{% if m4 == t5_2 %}Classroom {{cr32}}{%endif%}{% if m4 == t6_2 %}Classroom {{cr32}}{%endif%}{% if m4 == t7_2 %}Classroom {{cr42}}{%endif%}{% if m4 == t8_2 %}Classroom {{cr42}}{%endif%}{% if m4 == t9_2 %}Classroom {{cr52}}{%endif%}{% if m4 == t10_2 %}Classroom {{cr52}}{%endif%}{% if m4 == t11_2 %}Classroom {{cr62}}{%endif%}{% if m4 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m4 == t1_3 %}Classroom {{cr13}}{%endif%}{% if m4 == t2_3 %}Classroom {{cr13}}{%endif%}{% if m4 == t3_3 %}Classroom {{cr23}}{%endif%}{% if m4 == t4_3 %}Classroom {{cr23}}{%endif%}{% if m4 == t5_3 %}Classroom {{cr33}}{%endif%}{% if m4 == t6_3 %}Classroom {{cr33}}{%endif%}{% if m4 == t7_3 %}Classroom {{cr43}}{%endif%}{% if m4 == t8_3 %}Classroom {{cr43}}{%endif%}{% if m4 == t9_3 %}Classroom {{cr53}}{%endif%}{% if m4 == t10_3 %}Classroom {{cr53}}{%endif%}{% if m4 == t11_3 %}Classroom {{cr63}}{%endif%}{% if m4 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m4 == t1_4 %}Classroom {{cr14}}{%endif%}{% if m4 == t2_4 %}Classroom {{cr14}}{%endif%}{% if m4 == t3_4 %}Classroom {{cr24}}{%endif%}{% if m4 == t4_4 %}Classroom {{cr24}}{%endif%}{% if m4 == t5_4 %}Classroom {{cr34}}{%endif%}{% if m4 == t6_4 %}Classroom {{cr34}}{%endif%}{% if m4 == t7_4 %}Classroom {{cr44}}{%endif%}{% if m4 == t8_4 %}Classroom {{cr44}}{%endif%}{% if m4 == t9_4 %}Classroom {{cr54}}{%endif%}{% if m4 == t10_4 %}Classroom {{cr54}}{%endif%}{% if m4 == t11_4 %}Classroom {{cr64}}{%endif%}{% if m4 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m4 == t1_5 %}Classroom {{cr15}}{%endif%}{% if m4 == t2_5 %}Classroom {{cr15}}{%endif%}{% if m4 == t3_5 %}Classroom {{cr25}}{%endif%}{% if m4 == t4_5 %}Classroom {{cr25}}{%endif%}{% if m4 == t5_5 %}Classroom {{cr35}}{%endif%}{% if m4 == t6_5 %}Classroom {{cr35}}{%endif%}{% if m4 == t7_5 %}Classroom {{cr45}}{%endif%}{% if m4 == t8_5 %}Classroom {{cr45}}{%endif%}{% if m4 == t9_5 %}Classroom {{cr55}}{%endif%}{% if m4 == t10_5 %}Classroom {{cr55}}{%endif%}{% if m4 == t11_5 %}Classroom {{cr65}}{%endif%}{% if m4 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m4 == t1_6 %}Classroom {{cr16}}{%endif%}{% if m4 == t2_6 %}Classroom {{cr16}}{%endif%}{% if m4 == t3_6 %}Classroom {{cr26}}{%endif%}{% if m4 == t4_6 %}Classroom {{cr26}}{%endif%}{% if m4 == t5_6 %}Classroom {{cr36}}{%endif%}{% if m4 == t6_6 %}Classroom {{cr36}}{%endif%}{% if m4 == t7_6 %}Classroom {{cr46}}{%endif%}{% if m4 == t8_6 %}Classroom {{cr46}}{%endif%}{% if m4 == t9_6 %}Classroom {{cr56}}{%endif%}{% if m4 == t10_6 %}Classroom {{cr56}}{%endif%}{% if m4 == t11_6 %}Classroom {{cr66}}{%endif%}{% if m4 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{m5}}</td>
+    <td>{% if m5 == t1 %}Classroom {{cr1}}{%endif%}{% if m5 == t2 %}Classroom {{cr1}}{%endif%}{% if m5 == t3 %}Classroom {{cr2}}{%endif%}{% if m5 == t4 %}Classroom {{cr2}}{%endif%}{% if m5 == t5 %}Classroom {{cr3}}{%endif%}{% if m5 == t6 %}Classroom {{cr3}}{%endif%}{% if m5 == t7 %}Classroom {{cr4}}{%endif%}{% if m5 == t8 %}Classroom {{cr4}}{%endif%}{% if m5 == t9 %}Classroom {{cr5}}{%endif%}{% if m5 == t10 %}Classroom {{cr5}}{%endif%}{% if m5 == t11 %}Classroom {{cr6}}{%endif%}{% if m5 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m5 == t1_2 %}Classroom {{cr12}}{%endif%}{% if m5 == t2_2 %}Classroom {{cr12}}{%endif%}{% if m5 == t3_2 %}Classroom {{cr22}}{%endif%}{% if m5 == t4_2 %}Classroom {{cr22}}{%endif%}{% if m5 == t5_2 %}Classroom {{cr32}}{%endif%}{% if m5 == t6_2 %}Classroom {{cr32}}{%endif%}{% if m5 == t7_2 %}Classroom {{cr42}}{%endif%}{% if m5 == t8_2 %}Classroom {{cr42}}{%endif%}{% if m5 == t9_2 %}Classroom {{cr52}}{%endif%}{% if m5 == t10_2 %}Classroom {{cr52}}{%endif%}{% if m5 == t11_2 %}Classroom {{cr62}}{%endif%}{% if m5 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m5 == t1_3 %}Classroom {{cr13}}{%endif%}{% if m5 == t2_3 %}Classroom {{cr13}}{%endif%}{% if m5 == t3_3 %}Classroom {{cr23}}{%endif%}{% if m5 == t4_3 %}Classroom {{cr23}}{%endif%}{% if m5 == t5_3 %}Classroom {{cr33}}{%endif%}{% if m5 == t6_3 %}Classroom {{cr33}}{%endif%}{% if m5 == t7_3 %}Classroom {{cr43}}{%endif%}{% if m5 == t8_3 %}Classroom {{cr43}}{%endif%}{% if m5 == t9_3 %}Classroom {{cr53}}{%endif%}{% if m5 == t10_3 %}Classroom {{cr53}}{%endif%}{% if m5 == t11_3 %}Classroom {{cr63}}{%endif%}{% if m5 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m5 == t1_4 %}Classroom {{cr14}}{%endif%}{% if m5 == t2_4 %}Classroom {{cr14}}{%endif%}{% if m5 == t3_4 %}Classroom {{cr24}}{%endif%}{% if m5 == t4_4 %}Classroom {{cr24}}{%endif%}{% if m5 == t5_4 %}Classroom {{cr34}}{%endif%}{% if m5 == t6_4 %}Classroom {{cr34}}{%endif%}{% if m5 == t7_4 %}Classroom {{cr44}}{%endif%}{% if m5 == t8_4 %}Classroom {{cr44}}{%endif%}{% if m5 == t9_4 %}Classroom {{cr54}}{%endif%}{% if m5 == t10_4 %}Classroom {{cr54}}{%endif%}{% if m5 == t11_4 %}Classroom {{cr64}}{%endif%}{% if m5 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m5 == t1_5 %}Classroom {{cr15}}{%endif%}{% if m5 == t2_5 %}Classroom {{cr15}}{%endif%}{% if m5 == t3_5 %}Classroom {{cr25}}{%endif%}{% if m5 == t4_5 %}Classroom {{cr25}}{%endif%}{% if m5 == t5_5 %}Classroom {{cr35}}{%endif%}{% if m5 == t6_5 %}Classroom {{cr35}}{%endif%}{% if m5 == t7_5 %}Classroom {{cr45}}{%endif%}{% if m5 == t8_5 %}Classroom {{cr45}}{%endif%}{% if m5 == t9_5 %}Classroom {{cr55}}{%endif%}{% if m5 == t10_5 %}Classroom {{cr55}}{%endif%}{% if m5 == t11_5 %}Classroom {{cr65}}{%endif%}{% if m5 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m5 == t1_6 %}Classroom {{cr16}}{%endif%}{% if m5 == t2_6 %}Classroom {{cr16}}{%endif%}{% if m5 == t3_6 %}Classroom {{cr26}}{%endif%}{% if m5 == t4_6 %}Classroom {{cr26}}{%endif%}{% if m5 == t5_6 %}Classroom {{cr36}}{%endif%}{% if m5 == t6_6 %}Classroom {{cr36}}{%endif%}{% if m5 == t7_6 %}Classroom {{cr46}}{%endif%}{% if m5 == t8_6 %}Classroom {{cr46}}{%endif%}{% if m5 == t9_6 %}Classroom {{cr56}}{%endif%}{% if m5 == t10_6 %}Classroom {{cr56}}{%endif%}{% if m5 == t11_6 %}Classroom {{cr66}}{%endif%}{% if m5 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{m6}}</td>
+    <td>{% if m6 == t1 %}Classroom {{cr1}}{%endif%}{% if m6 == t2 %}Classroom {{cr1}}{%endif%}{% if m6 == t3 %}Classroom {{cr2}}{%endif%}{% if m6 == t4 %}Classroom {{cr2}}{%endif%}{% if m6 == t5 %}Classroom {{cr3}}{%endif%}{% if m6 == t6 %}Classroom {{cr3}}{%endif%}{% if m6 == t7 %}Classroom {{cr4}}{%endif%}{% if m6 == t8 %}Classroom {{cr4}}{%endif%}{% if m6 == t9 %}Classroom {{cr5}}{%endif%}{% if m6 == t10 %}Classroom {{cr5}}{%endif%}{% if m6 == t11 %}Classroom {{cr6}}{%endif%}{% if m6 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m6 == t1_2 %}Classroom {{cr12}}{%endif%}{% if m6 == t2_2 %}Classroom {{cr12}}{%endif%}{% if m6 == t3_2 %}Classroom {{cr22}}{%endif%}{% if m6 == t4_2 %}Classroom {{cr22}}{%endif%}{% if m6 == t5_2 %}Classroom {{cr32}}{%endif%}{% if m6 == t6_2 %}Classroom {{cr32}}{%endif%}{% if m6 == t7_2 %}Classroom {{cr42}}{%endif%}{% if m6 == t8_2 %}Classroom {{cr42}}{%endif%}{% if m6 == t9_2 %}Classroom {{cr52}}{%endif%}{% if m6 == t10_2 %}Classroom {{cr52}}{%endif%}{% if m6 == t11_2 %}Classroom {{cr62}}{%endif%}{% if m6 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m6 == t1_3 %}Classroom {{cr13}}{%endif%}{% if m6 == t2_3 %}Classroom {{cr13}}{%endif%}{% if m6 == t3_3 %}Classroom {{cr23}}{%endif%}{% if m6 == t4_3 %}Classroom {{cr23}}{%endif%}{% if m6 == t5_3 %}Classroom {{cr33}}{%endif%}{% if m6 == t6_3 %}Classroom {{cr33}}{%endif%}{% if m6 == t7_3 %}Classroom {{cr43}}{%endif%}{% if m6 == t8_3 %}Classroom {{cr43}}{%endif%}{% if m6 == t9_3 %}Classroom {{cr53}}{%endif%}{% if m6 == t10_3 %}Classroom {{cr53}}{%endif%}{% if m6 == t11_3 %}Classroom {{cr63}}{%endif%}{% if m6 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m6 == t1_4 %}Classroom {{cr14}}{%endif%}{% if m6 == t2_4 %}Classroom {{cr14}}{%endif%}{% if m6 == t3_4 %}Classroom {{cr24}}{%endif%}{% if m6 == t4_4 %}Classroom {{cr24}}{%endif%}{% if m6 == t5_4 %}Classroom {{cr34}}{%endif%}{% if m6 == t6_4 %}Classroom {{cr34}}{%endif%}{% if m6 == t7_4 %}Classroom {{cr44}}{%endif%}{% if m6 == t8_4 %}Classroom {{cr44}}{%endif%}{% if m6 == t9_4 %}Classroom {{cr54}}{%endif%}{% if m6 == t10_4 %}Classroom {{cr54}}{%endif%}{% if m6 == t11_4 %}Classroom {{cr64}}{%endif%}{% if m6 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m6 == t1_5 %}Classroom {{cr15}}{%endif%}{% if m6 == t2_5 %}Classroom {{cr15}}{%endif%}{% if m6 == t3_5 %}Classroom {{cr25}}{%endif%}{% if m6 == t4_5 %}Classroom {{cr25}}{%endif%}{% if m6 == t5_5 %}Classroom {{cr35}}{%endif%}{% if m6 == t6_5 %}Classroom {{cr35}}{%endif%}{% if m6 == t7_5 %}Classroom {{cr45}}{%endif%}{% if m6 == t8_5 %}Classroom {{cr45}}{%endif%}{% if m6 == t9_5 %}Classroom {{cr55}}{%endif%}{% if m6 == t10_5 %}Classroom {{cr55}}{%endif%}{% if m6 == t11_5 %}Classroom {{cr65}}{%endif%}{% if m6 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m6 == t1_6 %}Classroom {{cr16}}{%endif%}{% if m6 == t2_6 %}Classroom {{cr16}}{%endif%}{% if m6 == t3_6 %}Classroom {{cr26}}{%endif%}{% if m6 == t4_6 %}Classroom {{cr26}}{%endif%}{% if m6 == t5_6 %}Classroom {{cr36}}{%endif%}{% if m6 == t6_6 %}Classroom {{cr36}}{%endif%}{% if m6 == t7_6 %}Classroom {{cr46}}{%endif%}{% if m6 == t8_6 %}Classroom {{cr46}}{%endif%}{% if m6 == t9_6 %}Classroom {{cr56}}{%endif%}{% if m6 == t10_6 %}Classroom {{cr56}}{%endif%}{% if m6 == t11_6 %}Classroom {{cr66}}{%endif%}{% if m6 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{m7}}</td>
+    <td>{% if m7 == t1 %}Classroom {{cr1}}{%endif%}{% if m7 == t2 %}Classroom {{cr1}}{%endif%}{% if m7 == t3 %}Classroom {{cr2}}{%endif%}{% if m7 == t4 %}Classroom {{cr2}}{%endif%}{% if m7 == t5 %}Classroom {{cr3}}{%endif%}{% if m7 == t6 %}Classroom {{cr3}}{%endif%}{% if m7 == t7 %}Classroom {{cr4}}{%endif%}{% if m7 == t8 %}Classroom {{cr4}}{%endif%}{% if m7 == t9 %}Classroom {{cr5}}{%endif%}{% if m7 == t10 %}Classroom {{cr5}}{%endif%}{% if m7 == t11 %}Classroom {{cr6}}{%endif%}{% if m7 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m7 == t1_2 %}Classroom {{cr12}}{%endif%}{% if m7 == t2_2 %}Classroom {{cr12}}{%endif%}{% if m7 == t3_2 %}Classroom {{cr22}}{%endif%}{% if m7 == t4_2 %}Classroom {{cr22}}{%endif%}{% if m7 == t5_2 %}Classroom {{cr32}}{%endif%}{% if m7 == t6_2 %}Classroom {{cr32}}{%endif%}{% if m7 == t7_2 %}Classroom {{cr42}}{%endif%}{% if m7 == t8_2 %}Classroom {{cr42}}{%endif%}{% if m7 == t9_2 %}Classroom {{cr52}}{%endif%}{% if m7 == t10_2 %}Classroom {{cr52}}{%endif%}{% if m7 == t11_2 %}Classroom {{cr62}}{%endif%}{% if m7 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m7 == t1_3 %}Classroom {{cr13}}{%endif%}{% if m7 == t2_3 %}Classroom {{cr13}}{%endif%}{% if m7 == t3_3 %}Classroom {{cr23}}{%endif%}{% if m7 == t4_3 %}Classroom {{cr23}}{%endif%}{% if m7 == t5_3 %}Classroom {{cr33}}{%endif%}{% if m7 == t6_3 %}Classroom {{cr33}}{%endif%}{% if m7 == t7_3 %}Classroom {{cr43}}{%endif%}{% if m7 == t8_3 %}Classroom {{cr43}}{%endif%}{% if m7 == t9_3 %}Classroom {{cr53}}{%endif%}{% if m7 == t10_3 %}Classroom {{cr53}}{%endif%}{% if m7 == t11_3 %}Classroom {{cr63}}{%endif%}{% if m7 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m7 == t1_4 %}Classroom {{cr14}}{%endif%}{% if m7 == t2_4 %}Classroom {{cr14}}{%endif%}{% if m7 == t3_4 %}Classroom {{cr24}}{%endif%}{% if m7 == t4_4 %}Classroom {{cr24}}{%endif%}{% if m7 == t5_4 %}Classroom {{cr34}}{%endif%}{% if m7 == t6_4 %}Classroom {{cr34}}{%endif%}{% if m7 == t7_4 %}Classroom {{cr44}}{%endif%}{% if m7 == t8_4 %}Classroom {{cr44}}{%endif%}{% if m7 == t9_4 %}Classroom {{cr54}}{%endif%}{% if m7 == t10_4 %}Classroom {{cr54}}{%endif%}{% if m7 == t11_4 %}Classroom {{cr64}}{%endif%}{% if m7 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m7 == t1_5 %}Classroom {{cr15}}{%endif%}{% if m7 == t2_5 %}Classroom {{cr15}}{%endif%}{% if m7 == t3_5 %}Classroom {{cr25}}{%endif%}{% if m7 == t4_5 %}Classroom {{cr25}}{%endif%}{% if m7 == t5_5 %}Classroom {{cr35}}{%endif%}{% if m7 == t6_5 %}Classroom {{cr35}}{%endif%}{% if m7 == t7_5 %}Classroom {{cr45}}{%endif%}{% if m7 == t8_5 %}Classroom {{cr45}}{%endif%}{% if m7 == t9_5 %}Classroom {{cr55}}{%endif%}{% if m7 == t10_5 %}Classroom {{cr55}}{%endif%}{% if m7 == t11_5 %}Classroom {{cr65}}{%endif%}{% if m7 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m7 == t1_6 %}Classroom {{cr16}}{%endif%}{% if m7 == t2_6 %}Classroom {{cr16}}{%endif%}{% if m7 == t3_6 %}Classroom {{cr26}}{%endif%}{% if m7 == t4_6 %}Classroom {{cr26}}{%endif%}{% if m7 == t5_6 %}Classroom {{cr36}}{%endif%}{% if m7 == t6_6 %}Classroom {{cr36}}{%endif%}{% if m7 == t7_6 %}Classroom {{cr46}}{%endif%}{% if m7 == t8_6 %}Classroom {{cr46}}{%endif%}{% if m7 == t9_6 %}Classroom {{cr56}}{%endif%}{% if m7 == t10_6 %}Classroom {{cr56}}{%endif%}{% if m7 == t11_6 %}Classroom {{cr66}}{%endif%}{% if m7 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{m8}}</td>
+    <td>{% if m8 == t1 %}Classroom {{cr1}}{%endif%}{% if m8 == t2 %}Classroom {{cr1}}{%endif%}{% if m8 == t3 %}Classroom {{cr2}}{%endif%}{% if m8 == t4 %}Classroom {{cr2}}{%endif%}{% if m8 == t5 %}Classroom {{cr3}}{%endif%}{% if m8 == t6 %}Classroom {{cr3}}{%endif%}{% if m8 == t7 %}Classroom {{cr4}}{%endif%}{% if m8 == t8 %}Classroom {{cr4}}{%endif%}{% if m8 == t9 %}Classroom {{cr5}}{%endif%}{% if m8 == t10 %}Classroom {{cr5}}{%endif%}{% if m8 == t11 %}Classroom {{cr6}}{%endif%}{% if m8 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m8 == t1_2 %}Classroom {{cr12}}{%endif%}{% if m8 == t2_2 %}Classroom {{cr12}}{%endif%}{% if m8 == t3_2 %}Classroom {{cr22}}{%endif%}{% if m8 == t4_2 %}Classroom {{cr22}}{%endif%}{% if m8 == t5_2 %}Classroom {{cr32}}{%endif%}{% if m8 == t6_2 %}Classroom {{cr32}}{%endif%}{% if m8 == t7_2 %}Classroom {{cr42}}{%endif%}{% if m8 == t8_2 %}Classroom {{cr42}}{%endif%}{% if m8 == t9_2 %}Classroom {{cr52}}{%endif%}{% if m8 == t10_2 %}Classroom {{cr52}}{%endif%}{% if m8 == t11_2 %}Classroom {{cr62}}{%endif%}{% if m8 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m8 == t1_3 %}Classroom {{cr13}}{%endif%}{% if m8 == t2_3 %}Classroom {{cr13}}{%endif%}{% if m8 == t3_3 %}Classroom {{cr23}}{%endif%}{% if m8 == t4_3 %}Classroom {{cr23}}{%endif%}{% if m8 == t5_3 %}Classroom {{cr33}}{%endif%}{% if m8 == t6_3 %}Classroom {{cr33}}{%endif%}{% if m8 == t7_3 %}Classroom {{cr43}}{%endif%}{% if m8 == t8_3 %}Classroom {{cr43}}{%endif%}{% if m8 == t9_3 %}Classroom {{cr53}}{%endif%}{% if m8 == t10_3 %}Classroom {{cr53}}{%endif%}{% if m8 == t11_3 %}Classroom {{cr63}}{%endif%}{% if m8 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m8 == t1_4 %}Classroom {{cr14}}{%endif%}{% if m8 == t2_4 %}Classroom {{cr14}}{%endif%}{% if m8 == t3_4 %}Classroom {{cr24}}{%endif%}{% if m8 == t4_4 %}Classroom {{cr24}}{%endif%}{% if m8 == t5_4 %}Classroom {{cr34}}{%endif%}{% if m8 == t6_4 %}Classroom {{cr34}}{%endif%}{% if m8 == t7_4 %}Classroom {{cr44}}{%endif%}{% if m8 == t8_4 %}Classroom {{cr44}}{%endif%}{% if m8 == t9_4 %}Classroom {{cr54}}{%endif%}{% if m8 == t10_4 %}Classroom {{cr54}}{%endif%}{% if m8 == t11_4 %}Classroom {{cr64}}{%endif%}{% if m8 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m8 == t1_5 %}Classroom {{cr15}}{%endif%}{% if m8 == t2_5 %}Classroom {{cr15}}{%endif%}{% if m8 == t3_5 %}Classroom {{cr25}}{%endif%}{% if m8 == t4_5 %}Classroom {{cr25}}{%endif%}{% if m8 == t5_5 %}Classroom {{cr35}}{%endif%}{% if m8 == t6_5 %}Classroom {{cr35}}{%endif%}{% if m8 == t7_5 %}Classroom {{cr45}}{%endif%}{% if m8 == t8_5 %}Classroom {{cr45}}{%endif%}{% if m8 == t9_5 %}Classroom {{cr55}}{%endif%}{% if m8 == t10_5 %}Classroom {{cr55}}{%endif%}{% if m8 == t11_5 %}Classroom {{cr65}}{%endif%}{% if m8 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m8 == t1_6 %}Classroom {{cr16}}{%endif%}{% if m8 == t2_6 %}Classroom {{cr16}}{%endif%}{% if m8 == t3_6 %}Classroom {{cr26}}{%endif%}{% if m8 == t4_6 %}Classroom {{cr26}}{%endif%}{% if m8 == t5_6 %}Classroom {{cr36}}{%endif%}{% if m8 == t6_6 %}Classroom {{cr36}}{%endif%}{% if m8 == t7_6 %}Classroom {{cr46}}{%endif%}{% if m8 == t8_6 %}Classroom {{cr46}}{%endif%}{% if m8 == t9_6 %}Classroom {{cr56}}{%endif%}{% if m8 == t10_6 %}Classroom {{cr56}}{%endif%}{% if m8 == t11_6 %}Classroom {{cr66}}{%endif%}{% if m8 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{m9}}</td>
+    <td>{% if m9 == t1 %}Classroom {{cr1}}{%endif%}{% if m9 == t2 %}Classroom {{cr1}}{%endif%}{% if m9 == t3 %}Classroom {{cr2}}{%endif%}{% if m9 == t4 %}Classroom {{cr2}}{%endif%}{% if m9 == t5 %}Classroom {{cr3}}{%endif%}{% if m9 == t6 %}Classroom {{cr3}}{%endif%}{% if m9 == t7 %}Classroom {{cr4}}{%endif%}{% if m9 == t8 %}Classroom {{cr4}}{%endif%}{% if m9 == t9 %}Classroom {{cr5}}{%endif%}{% if m9 == t10 %}Classroom {{cr5}}{%endif%}{% if m9 == t11 %}Classroom {{cr6}}{%endif%}{% if m9 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m9 == t1_2 %}Classroom {{cr12}}{%endif%}{% if m9 == t2_2 %}Classroom {{cr12}}{%endif%}{% if m9 == t3_2 %}Classroom {{cr22}}{%endif%}{% if m9 == t4_2 %}Classroom {{cr22}}{%endif%}{% if m9 == t5_2 %}Classroom {{cr32}}{%endif%}{% if m9 == t6_2 %}Classroom {{cr32}}{%endif%}{% if m9 == t7_2 %}Classroom {{cr42}}{%endif%}{% if m9 == t8_2 %}Classroom {{cr42}}{%endif%}{% if m9 == t9_2 %}Classroom {{cr52}}{%endif%}{% if m9 == t10_2 %}Classroom {{cr52}}{%endif%}{% if m9 == t11_2 %}Classroom {{cr62}}{%endif%}{% if m9 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m9 == t1_3 %}Classroom {{cr13}}{%endif%}{% if m9 == t2_3 %}Classroom {{cr13}}{%endif%}{% if m9 == t3_3 %}Classroom {{cr23}}{%endif%}{% if m9 == t4_3 %}Classroom {{cr23}}{%endif%}{% if m9 == t5_3 %}Classroom {{cr33}}{%endif%}{% if m9 == t6_3 %}Classroom {{cr33}}{%endif%}{% if m9 == t7_3 %}Classroom {{cr43}}{%endif%}{% if m9 == t8_3 %}Classroom {{cr43}}{%endif%}{% if m9 == t9_3 %}Classroom {{cr53}}{%endif%}{% if m9 == t10_3 %}Classroom {{cr53}}{%endif%}{% if m9 == t11_3 %}Classroom {{cr63}}{%endif%}{% if m9 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m9 == t1_4 %}Classroom {{cr14}}{%endif%}{% if m9 == t2_4 %}Classroom {{cr14}}{%endif%}{% if m9 == t3_4 %}Classroom {{cr24}}{%endif%}{% if m9 == t4_4 %}Classroom {{cr24}}{%endif%}{% if m9 == t5_4 %}Classroom {{cr34}}{%endif%}{% if m9 == t6_4 %}Classroom {{cr34}}{%endif%}{% if m9 == t7_4 %}Classroom {{cr44}}{%endif%}{% if m9 == t8_4 %}Classroom {{cr44}}{%endif%}{% if m9 == t9_4 %}Classroom {{cr54}}{%endif%}{% if m9 == t10_4 %}Classroom {{cr54}}{%endif%}{% if m9 == t11_4 %}Classroom {{cr64}}{%endif%}{% if m9 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m9 == t1_5 %}Classroom {{cr15}}{%endif%}{% if m9 == t2_5 %}Classroom {{cr15}}{%endif%}{% if m9 == t3_5 %}Classroom {{cr25}}{%endif%}{% if m9 == t4_5 %}Classroom {{cr25}}{%endif%}{% if m9 == t5_5 %}Classroom {{cr35}}{%endif%}{% if m9 == t6_5 %}Classroom {{cr35}}{%endif%}{% if m9 == t7_5 %}Classroom {{cr45}}{%endif%}{% if m9 == t8_5 %}Classroom {{cr45}}{%endif%}{% if m9 == t9_5 %}Classroom {{cr55}}{%endif%}{% if m9 == t10_5 %}Classroom {{cr55}}{%endif%}{% if m9 == t11_5 %}Classroom {{cr65}}{%endif%}{% if m9 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m9 == t1_6 %}Classroom {{cr16}}{%endif%}{% if m9 == t2_6 %}Classroom {{cr16}}{%endif%}{% if m9 == t3_6 %}Classroom {{cr26}}{%endif%}{% if m9 == t4_6 %}Classroom {{cr26}}{%endif%}{% if m9 == t5_6 %}Classroom {{cr36}}{%endif%}{% if m9 == t6_6 %}Classroom {{cr36}}{%endif%}{% if m9 == t7_6 %}Classroom {{cr46}}{%endif%}{% if m9 == t8_6 %}Classroom {{cr46}}{%endif%}{% if m9 == t9_6 %}Classroom {{cr56}}{%endif%}{% if m9 == t10_6 %}Classroom {{cr56}}{%endif%}{% if m9 == t11_6 %}Classroom {{cr66}}{%endif%}{% if m9 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{m10}}</td>
+    <td>{% if m10 == t1 %}Classroom {{cr1}}{%endif%}{% if m10 == t2 %}Classroom {{cr1}}{%endif%}{% if m10 == t3 %}Classroom {{cr2}}{%endif%}{% if m10 == t4 %}Classroom {{cr2}}{%endif%}{% if m10 == t5 %}Classroom {{cr3}}{%endif%}{% if m10 == t6 %}Classroom {{cr3}}{%endif%}{% if m10 == t7 %}Classroom {{cr4}}{%endif%}{% if m10 == t8 %}Classroom {{cr4}}{%endif%}{% if m10 == t9 %}Classroom {{cr5}}{%endif%}{% if m10 == t10 %}Classroom {{cr5}}{%endif%}{% if m10 == t11 %}Classroom {{cr6}}{%endif%}{% if m10 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m10 == t1_2 %}Classroom {{cr12}}{%endif%}{% if m10 == t2_2 %}Classroom {{cr12}}{%endif%}{% if m10 == t3_2 %}Classroom {{cr22}}{%endif%}{% if m10 == t4_2 %}Classroom {{cr22}}{%endif%}{% if m10 == t5_2 %}Classroom {{cr32}}{%endif%}{% if m10 == t6_2 %}Classroom {{cr32}}{%endif%}{% if m10 == t7_2 %}Classroom {{cr42}}{%endif%}{% if m10 == t8_2 %}Classroom {{cr42}}{%endif%}{% if m10 == t9_2 %}Classroom {{cr52}}{%endif%}{% if m10 == t10_2 %}Classroom {{cr52}}{%endif%}{% if m10 == t11_2 %}Classroom {{cr62}}{%endif%}{% if m10 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m10 == t1_3 %}Classroom {{cr13}}{%endif%}{% if m10 == t2_3 %}Classroom {{cr13}}{%endif%}{% if m10 == t3_3 %}Classroom {{cr23}}{%endif%}{% if m10 == t4_3 %}Classroom {{cr23}}{%endif%}{% if m10 == t5_3 %}Classroom {{cr33}}{%endif%}{% if m10 == t6_3 %}Classroom {{cr33}}{%endif%}{% if m10 == t7_3 %}Classroom {{cr43}}{%endif%}{% if m10 == t8_3 %}Classroom {{cr43}}{%endif%}{% if m10 == t9_3 %}Classroom {{cr53}}{%endif%}{% if m10 == t10_3 %}Classroom {{cr53}}{%endif%}{% if m10 == t11_3 %}Classroom {{cr63}}{%endif%}{% if m10 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m10 == t1_4 %}Classroom {{cr14}}{%endif%}{% if m10 == t2_4 %}Classroom {{cr14}}{%endif%}{% if m10 == t3_4 %}Classroom {{cr24}}{%endif%}{% if m10 == t4_4 %}Classroom {{cr24}}{%endif%}{% if m10 == t5_4 %}Classroom {{cr34}}{%endif%}{% if m10 == t6_4 %}Classroom {{cr34}}{%endif%}{% if m10 == t7_4 %}Classroom {{cr44}}{%endif%}{% if m10 == t8_4 %}Classroom {{cr44}}{%endif%}{% if m10 == t9_4 %}Classroom {{cr54}}{%endif%}{% if m10 == t10_4 %}Classroom {{cr54}}{%endif%}{% if m10 == t11_4 %}Classroom {{cr64}}{%endif%}{% if m10 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m10 == t1_5 %}Classroom {{cr15}}{%endif%}{% if m10 == t2_5 %}Classroom {{cr15}}{%endif%}{% if m10 == t3_5 %}Classroom {{cr25}}{%endif%}{% if m10 == t4_5 %}Classroom {{cr25}}{%endif%}{% if m10 == t5_5 %}Classroom {{cr35}}{%endif%}{% if m10 == t6_5 %}Classroom {{cr35}}{%endif%}{% if m10 == t7_5 %}Classroom {{cr45}}{%endif%}{% if m10 == t8_5 %}Classroom {{cr45}}{%endif%}{% if m10 == t9_5 %}Classroom {{cr55}}{%endif%}{% if m10 == t10_5 %}Classroom {{cr55}}{%endif%}{% if m10 == t11_5 %}Classroom {{cr65}}{%endif%}{% if m10 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m10 == t1_6 %}Classroom {{cr16}}{%endif%}{% if m10 == t2_6 %}Classroom {{cr16}}{%endif%}{% if m10 == t3_6 %}Classroom {{cr26}}{%endif%}{% if m10 == t4_6 %}Classroom {{cr26}}{%endif%}{% if m10 == t5_6 %}Classroom {{cr36}}{%endif%}{% if m10 == t6_6 %}Classroom {{cr36}}{%endif%}{% if m10 == t7_6 %}Classroom {{cr46}}{%endif%}{% if m10 == t8_6 %}Classroom {{cr46}}{%endif%}{% if m10 == t9_6 %}Classroom {{cr56}}{%endif%}{% if m10 == t10_6 %}Classroom {{cr56}}{%endif%}{% if m10 == t11_6 %}Classroom {{cr66}}{%endif%}{% if m10 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{m11}}</td>
+    <td>{% if m11 == t1 %}Classroom {{cr1}}{%endif%}{% if m11 == t2 %}Classroom {{cr1}}{%endif%}{% if m11 == t3 %}Classroom {{cr2}}{%endif%}{% if m11 == t4 %}Classroom {{cr2}}{%endif%}{% if m11 == t5 %}Classroom {{cr3}}{%endif%}{% if m11 == t6 %}Classroom {{cr3}}{%endif%}{% if m11 == t7 %}Classroom {{cr4}}{%endif%}{% if m11 == t8 %}Classroom {{cr4}}{%endif%}{% if m11 == t9 %}Classroom {{cr5}}{%endif%}{% if m11 == t10 %}Classroom {{cr5}}{%endif%}{% if m11 == t11 %}Classroom {{cr6}}{%endif%}{% if m11 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m11 == t1_2 %}Classroom {{cr12}}{%endif%}{% if m11 == t2_2 %}Classroom {{cr12}}{%endif%}{% if m11 == t3_2 %}Classroom {{cr22}}{%endif%}{% if m11 == t4_2 %}Classroom {{cr22}}{%endif%}{% if m11 == t5_2 %}Classroom {{cr32}}{%endif%}{% if m11 == t6_2 %}Classroom {{cr32}}{%endif%}{% if m11 == t7_2 %}Classroom {{cr42}}{%endif%}{% if m11 == t8_2 %}Classroom {{cr42}}{%endif%}{% if m11 == t9_2 %}Classroom {{cr52}}{%endif%}{% if m11 == t10_2 %}Classroom {{cr52}}{%endif%}{% if m11 == t11_2 %}Classroom {{cr62}}{%endif%}{% if m11 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m11 == t1_3 %}Classroom {{cr13}}{%endif%}{% if m11 == t2_3 %}Classroom {{cr13}}{%endif%}{% if m11 == t3_3 %}Classroom {{cr23}}{%endif%}{% if m11 == t4_3 %}Classroom {{cr23}}{%endif%}{% if m11 == t5_3 %}Classroom {{cr33}}{%endif%}{% if m11 == t6_3 %}Classroom {{cr33}}{%endif%}{% if m11 == t7_3 %}Classroom {{cr43}}{%endif%}{% if m11 == t8_3 %}Classroom {{cr43}}{%endif%}{% if m11 == t9_3 %}Classroom {{cr53}}{%endif%}{% if m11 == t10_3 %}Classroom {{cr53}}{%endif%}{% if m11 == t11_3 %}Classroom {{cr63}}{%endif%}{% if m11 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m11 == t1_4 %}Classroom {{cr14}}{%endif%}{% if m11 == t2_4 %}Classroom {{cr14}}{%endif%}{% if m11 == t3_4 %}Classroom {{cr24}}{%endif%}{% if m11 == t4_4 %}Classroom {{cr24}}{%endif%}{% if m11 == t5_4 %}Classroom {{cr34}}{%endif%}{% if m11 == t6_4 %}Classroom {{cr34}}{%endif%}{% if m11 == t7_4 %}Classroom {{cr44}}{%endif%}{% if m11 == t8_4 %}Classroom {{cr44}}{%endif%}{% if m11 == t9_4 %}Classroom {{cr54}}{%endif%}{% if m11 == t10_4 %}Classroom {{cr54}}{%endif%}{% if m11 == t11_4 %}Classroom {{cr64}}{%endif%}{% if m11 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m11 == t1_5 %}Classroom {{cr15}}{%endif%}{% if m11 == t2_5 %}Classroom {{cr15}}{%endif%}{% if m11 == t3_5 %}Classroom {{cr25}}{%endif%}{% if m11 == t4_5 %}Classroom {{cr25}}{%endif%}{% if m11 == t5_5 %}Classroom {{cr35}}{%endif%}{% if m11 == t6_5 %}Classroom {{cr35}}{%endif%}{% if m11 == t7_5 %}Classroom {{cr45}}{%endif%}{% if m11 == t8_5 %}Classroom {{cr45}}{%endif%}{% if m11 == t9_5 %}Classroom {{cr55}}{%endif%}{% if m11 == t10_5 %}Classroom {{cr55}}{%endif%}{% if m11 == t11_5 %}Classroom {{cr65}}{%endif%}{% if m11 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m11 == t1_6 %}Classroom {{cr16}}{%endif%}{% if m11 == t2_6 %}Classroom {{cr16}}{%endif%}{% if m11 == t3_6 %}Classroom {{cr26}}{%endif%}{% if m11 == t4_6 %}Classroom {{cr26}}{%endif%}{% if m11 == t5_6 %}Classroom {{cr36}}{%endif%}{% if m11 == t6_6 %}Classroom {{cr36}}{%endif%}{% if m11 == t7_6 %}Classroom {{cr46}}{%endif%}{% if m11 == t8_6 %}Classroom {{cr46}}{%endif%}{% if m11 == t9_6 %}Classroom {{cr56}}{%endif%}{% if m11 == t10_6 %}Classroom {{cr56}}{%endif%}{% if m11 == t11_6 %}Classroom {{cr66}}{%endif%}{% if m11 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{m12}}</td>
+    <td>{% if m12 == t1 %}Classroom {{cr1}}{%endif%}{% if m12 == t2 %}Classroom {{cr1}}{%endif%}{% if m12 == t3 %}Classroom {{cr2}}{%endif%}{% if m12 == t4 %}Classroom {{cr2}}{%endif%}{% if m12 == t5 %}Classroom {{cr3}}{%endif%}{% if m12 == t6 %}Classroom {{cr3}}{%endif%}{% if m12 == t7 %}Classroom {{cr4}}{%endif%}{% if m12 == t8 %}Classroom {{cr4}}{%endif%}{% if m12 == t9 %}Classroom {{cr5}}{%endif%}{% if m12 == t10 %}Classroom {{cr5}}{%endif%}{% if m12 == t11 %}Classroom {{cr6}}{%endif%}{% if m12 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if m12 == t1_2 %}Classroom {{cr12}}{%endif%}{% if m12 == t2_2 %}Classroom {{cr12}}{%endif%}{% if m12 == t3_2 %}Classroom {{cr22}}{%endif%}{% if m12 == t4_2 %}Classroom {{cr22}}{%endif%}{% if m12 == t5_2 %}Classroom {{cr32}}{%endif%}{% if m12 == t6_2 %}Classroom {{cr32}}{%endif%}{% if m12 == t7_2 %}Classroom {{cr42}}{%endif%}{% if m12 == t8_2 %}Classroom {{cr42}}{%endif%}{% if m12 == t9_2 %}Classroom {{cr52}}{%endif%}{% if m12 == t10_2 %}Classroom {{cr52}}{%endif%}{% if m12 == t11_2 %}Classroom {{cr62}}{%endif%}{% if m12 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if m12 == t1_3 %}Classroom {{cr13}}{%endif%}{% if m12 == t2_3 %}Classroom {{cr13}}{%endif%}{% if m12 == t3_3 %}Classroom {{cr23}}{%endif%}{% if m12 == t4_3 %}Classroom {{cr23}}{%endif%}{% if m12 == t5_3 %}Classroom {{cr33}}{%endif%}{% if m12 == t6_3 %}Classroom {{cr33}}{%endif%}{% if m12 == t7_3 %}Classroom {{cr43}}{%endif%}{% if m12 == t8_3 %}Classroom {{cr43}}{%endif%}{% if m12 == t9_3 %}Classroom {{cr53}}{%endif%}{% if m12 == t10_3 %}Classroom {{cr53}}{%endif%}{% if m12 == t11_3 %}Classroom {{cr63}}{%endif%}{% if m12 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if m12 == t1_4 %}Classroom {{cr14}}{%endif%}{% if m12 == t2_4 %}Classroom {{cr14}}{%endif%}{% if m12 == t3_4 %}Classroom {{cr24}}{%endif%}{% if m12 == t4_4 %}Classroom {{cr24}}{%endif%}{% if m12 == t5_4 %}Classroom {{cr34}}{%endif%}{% if m12 == t6_4 %}Classroom {{cr34}}{%endif%}{% if m12 == t7_4 %}Classroom {{cr44}}{%endif%}{% if m12 == t8_4 %}Classroom {{cr44}}{%endif%}{% if m12 == t9_4 %}Classroom {{cr54}}{%endif%}{% if m12 == t10_4 %}Classroom {{cr54}}{%endif%}{% if m12 == t11_4 %}Classroom {{cr64}}{%endif%}{% if m12 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if m12 == t1_5 %}Classroom {{cr15}}{%endif%}{% if m12 == t2_5 %}Classroom {{cr15}}{%endif%}{% if m12 == t3_5 %}Classroom {{cr25}}{%endif%}{% if m12 == t4_5 %}Classroom {{cr25}}{%endif%}{% if m12 == t5_5 %}Classroom {{cr35}}{%endif%}{% if m12 == t6_5 %}Classroom {{cr35}}{%endif%}{% if m12 == t7_5 %}Classroom {{cr45}}{%endif%}{% if m12 == t8_5 %}Classroom {{cr45}}{%endif%}{% if m12 == t9_5 %}Classroom {{cr55}}{%endif%}{% if m12 == t10_5 %}Classroom {{cr55}}{%endif%}{% if m12 == t11_5 %}Classroom {{cr65}}{%endif%}{% if m12 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if m12 == t1_6 %}Classroom {{cr16}}{%endif%}{% if m12 == t2_6 %}Classroom {{cr16}}{%endif%}{% if m12 == t3_6 %}Classroom {{cr26}}{%endif%}{% if m12 == t4_6 %}Classroom {{cr26}}{%endif%}{% if m12 == t5_6 %}Classroom {{cr36}}{%endif%}{% if m12 == t6_6 %}Classroom {{cr36}}{%endif%}{% if m12 == t7_6 %}Classroom {{cr46}}{%endif%}{% if m12 == t8_6 %}Classroom {{cr46}}{%endif%}{% if m12 == t9_6 %}Classroom {{cr56}}{%endif%}{% if m12 == t10_6 %}Classroom {{cr56}}{%endif%}{% if m12 == t11_6 %}Classroom {{cr66}}{%endif%}{% if m12 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{s1}}</td>
+    <td>{% if s1 == t1 %}Classroom {{cr1}}{%endif%}{% if s1 == t2 %}Classroom {{cr1}}{%endif%}{% if s1 == t3 %}Classroom {{cr2}}{%endif%}{% if s1 == t4 %}Classroom {{cr2}}{%endif%}{% if s1 == t5 %}Classroom {{cr3}}{%endif%}{% if s1 == t6 %}Classroom {{cr3}}{%endif%}{% if s1 == t7 %}Classroom {{cr4}}{%endif%}{% if s1 == t8 %}Classroom {{cr4}}{%endif%}{% if s1 == t9 %}Classroom {{cr5}}{%endif%}{% if s1 == t10 %}Classroom {{cr5}}{%endif%}{% if s1 == t11 %}Classroom {{cr6}}{%endif%}{% if s1 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if s1 == t1_2 %}Classroom {{cr12}}{%endif%}{% if s1 == t2_2 %}Classroom {{cr12}}{%endif%}{% if s1 == t3_2 %}Classroom {{cr22}}{%endif%}{% if s1 == t4_2 %}Classroom {{cr22}}{%endif%}{% if s1 == t5_2 %}Classroom {{cr32}}{%endif%}{% if s1 == t6_2 %}Classroom {{cr32}}{%endif%}{% if s1 == t7_2 %}Classroom {{cr42}}{%endif%}{% if s1 == t8_2 %}Classroom {{cr42}}{%endif%}{% if s1 == t9_2 %}Classroom {{cr52}}{%endif%}{% if s1 == t10_2 %}Classroom {{cr52}}{%endif%}{% if s1 == t11_2 %}Classroom {{cr62}}{%endif%}{% if s1 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if s1 == t1_3 %}Classroom {{cr13}}{%endif%}{% if s1 == t2_3 %}Classroom {{cr13}}{%endif%}{% if s1 == t3_3 %}Classroom {{cr23}}{%endif%}{% if s1 == t4_3 %}Classroom {{cr23}}{%endif%}{% if s1 == t5_3 %}Classroom {{cr33}}{%endif%}{% if s1 == t6_3 %}Classroom {{cr33}}{%endif%}{% if s1 == t7_3 %}Classroom {{cr43}}{%endif%}{% if s1 == t8_3 %}Classroom {{cr43}}{%endif%}{% if s1 == t9_3 %}Classroom {{cr53}}{%endif%}{% if s1 == t10_3 %}Classroom {{cr53}}{%endif%}{% if s1 == t11_3 %}Classroom {{cr63}}{%endif%}{% if s1 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if s1 == t1_4 %}Classroom {{cr14}}{%endif%}{% if s1 == t2_4 %}Classroom {{cr14}}{%endif%}{% if s1 == t3_4 %}Classroom {{cr24}}{%endif%}{% if s1 == t4_4 %}Classroom {{cr24}}{%endif%}{% if s1 == t5_4 %}Classroom {{cr34}}{%endif%}{% if s1 == t6_4 %}Classroom {{cr34}}{%endif%}{% if s1 == t7_4 %}Classroom {{cr44}}{%endif%}{% if s1 == t8_4 %}Classroom {{cr44}}{%endif%}{% if s1 == t9_4 %}Classroom {{cr54}}{%endif%}{% if s1 == t10_4 %}Classroom {{cr54}}{%endif%}{% if s1 == t11_4 %}Classroom {{cr64}}{%endif%}{% if s1 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if s1 == t1_5 %}Classroom {{cr15}}{%endif%}{% if s1 == t2_5 %}Classroom {{cr15}}{%endif%}{% if s1 == t3_5 %}Classroom {{cr25}}{%endif%}{% if s1 == t4_5 %}Classroom {{cr25}}{%endif%}{% if s1 == t5_5 %}Classroom {{cr35}}{%endif%}{% if s1 == t6_5 %}Classroom {{cr35}}{%endif%}{% if s1 == t7_5 %}Classroom {{cr45}}{%endif%}{% if s1 == t8_5 %}Classroom {{cr45}}{%endif%}{% if s1 == t9_5 %}Classroom {{cr55}}{%endif%}{% if s1 == t10_5 %}Classroom {{cr55}}{%endif%}{% if s1 == t11_5 %}Classroom {{cr65}}{%endif%}{% if s1 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if s1 == t1_6 %}Classroom {{cr16}}{%endif%}{% if s1 == t2_6 %}Classroom {{cr16}}{%endif%}{% if s1 == t3_6 %}Classroom {{cr26}}{%endif%}{% if s1 == t4_6 %}Classroom {{cr26}}{%endif%}{% if s1 == t5_6 %}Classroom {{cr36}}{%endif%}{% if s1 == t6_6 %}Classroom {{cr36}}{%endif%}{% if s1 == t7_6 %}Classroom {{cr46}}{%endif%}{% if s1 == t8_6 %}Classroom {{cr46}}{%endif%}{% if s1 == t9_6 %}Classroom {{cr56}}{%endif%}{% if s1 == t10_6 %}Classroom {{cr56}}{%endif%}{% if s1 == t11_6 %}Classroom {{cr66}}{%endif%}{% if s1 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{s2}}</td>
+    <td>{% if s2 == t1 %}Classroom {{cr1}}{%endif%}{% if s2 == t2 %}Classroom {{cr1}}{%endif%}{% if s2 == t3 %}Classroom {{cr2}}{%endif%}{% if s2 == t4 %}Classroom {{cr2}}{%endif%}{% if s2 == t5 %}Classroom {{cr3}}{%endif%}{% if s2 == t6 %}Classroom {{cr3}}{%endif%}{% if s2 == t7 %}Classroom {{cr4}}{%endif%}{% if s2 == t8 %}Classroom {{cr4}}{%endif%}{% if s2 == t9 %}Classroom {{cr5}}{%endif%}{% if s2 == t10 %}Classroom {{cr5}}{%endif%}{% if s2 == t11 %}Classroom {{cr6}}{%endif%}{% if s2 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if s2 == t1_2 %}Classroom {{cr12}}{%endif%}{% if s2 == t2_2 %}Classroom {{cr12}}{%endif%}{% if s2 == t3_2 %}Classroom {{cr22}}{%endif%}{% if s2 == t4_2 %}Classroom {{cr22}}{%endif%}{% if s2 == t5_2 %}Classroom {{cr32}}{%endif%}{% if s2 == t6_2 %}Classroom {{cr32}}{%endif%}{% if s2 == t7_2 %}Classroom {{cr42}}{%endif%}{% if s2 == t8_2 %}Classroom {{cr42}}{%endif%}{% if s2 == t9_2 %}Classroom {{cr52}}{%endif%}{% if s2 == t10_2 %}Classroom {{cr52}}{%endif%}{% if s2 == t11_2 %}Classroom {{cr62}}{%endif%}{% if s2 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if s2 == t1_3 %}Classroom {{cr13}}{%endif%}{% if s2 == t2_3 %}Classroom {{cr13}}{%endif%}{% if s2 == t3_3 %}Classroom {{cr23}}{%endif%}{% if s2 == t4_3 %}Classroom {{cr23}}{%endif%}{% if s2 == t5_3 %}Classroom {{cr33}}{%endif%}{% if s2 == t6_3 %}Classroom {{cr33}}{%endif%}{% if s2 == t7_3 %}Classroom {{cr43}}{%endif%}{% if s2 == t8_3 %}Classroom {{cr43}}{%endif%}{% if s2 == t9_3 %}Classroom {{cr53}}{%endif%}{% if s2 == t10_3 %}Classroom {{cr53}}{%endif%}{% if s2 == t11_3 %}Classroom {{cr63}}{%endif%}{% if s2 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if s2 == t1_4 %}Classroom {{cr14}}{%endif%}{% if s2 == t2_4 %}Classroom {{cr14}}{%endif%}{% if s2 == t3_4 %}Classroom {{cr24}}{%endif%}{% if s2 == t4_4 %}Classroom {{cr24}}{%endif%}{% if s2 == t5_4 %}Classroom {{cr34}}{%endif%}{% if s2 == t6_4 %}Classroom {{cr34}}{%endif%}{% if s2 == t7_4 %}Classroom {{cr44}}{%endif%}{% if s2 == t8_4 %}Classroom {{cr44}}{%endif%}{% if s2 == t9_4 %}Classroom {{cr54}}{%endif%}{% if s2 == t10_4 %}Classroom {{cr54}}{%endif%}{% if s2 == t11_4 %}Classroom {{cr64}}{%endif%}{% if s2 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if s2 == t1_5 %}Classroom {{cr15}}{%endif%}{% if s2 == t2_5 %}Classroom {{cr15}}{%endif%}{% if s2 == t3_5 %}Classroom {{cr25}}{%endif%}{% if s2 == t4_5 %}Classroom {{cr25}}{%endif%}{% if s2 == t5_5 %}Classroom {{cr35}}{%endif%}{% if s2 == t6_5 %}Classroom {{cr35}}{%endif%}{% if s2 == t7_5 %}Classroom {{cr45}}{%endif%}{% if s2 == t8_5 %}Classroom {{cr45}}{%endif%}{% if s2 == t9_5 %}Classroom {{cr55}}{%endif%}{% if s2 == t10_5 %}Classroom {{cr55}}{%endif%}{% if s2 == t11_5 %}Classroom {{cr65}}{%endif%}{% if s2 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if s2 == t1_6 %}Classroom {{cr16}}{%endif%}{% if s2 == t2_6 %}Classroom {{cr16}}{%endif%}{% if s2 == t3_6 %}Classroom {{cr26}}{%endif%}{% if s2 == t4_6 %}Classroom {{cr26}}{%endif%}{% if s2 == t5_6 %}Classroom {{cr36}}{%endif%}{% if s2 == t6_6 %}Classroom {{cr36}}{%endif%}{% if s2 == t7_6 %}Classroom {{cr46}}{%endif%}{% if s2 == t8_6 %}Classroom {{cr46}}{%endif%}{% if s2 == t9_6 %}Classroom {{cr56}}{%endif%}{% if s2 == t10_6 %}Classroom {{cr56}}{%endif%}{% if s2 == t11_6 %}Classroom {{cr66}}{%endif%}{% if s2 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{s3}}</td>
+    <td>{% if s3 == t1 %}Classroom {{cr1}}{%endif%}{% if s3 == t2 %}Classroom {{cr1}}{%endif%}{% if s3 == t3 %}Classroom {{cr2}}{%endif%}{% if s3 == t4 %}Classroom {{cr2}}{%endif%}{% if s3 == t5 %}Classroom {{cr3}}{%endif%}{% if s3 == t6 %}Classroom {{cr3}}{%endif%}{% if s3 == t7 %}Classroom {{cr4}}{%endif%}{% if s3 == t8 %}Classroom {{cr4}}{%endif%}{% if s3 == t9 %}Classroom {{cr5}}{%endif%}{% if s3 == t10 %}Classroom {{cr5}}{%endif%}{% if s3 == t11 %}Classroom {{cr6}}{%endif%}{% if s3 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if s3 == t1_2 %}Classroom {{cr12}}{%endif%}{% if s3 == t2_2 %}Classroom {{cr12}}{%endif%}{% if s3 == t3_2 %}Classroom {{cr22}}{%endif%}{% if s3 == t4_2 %}Classroom {{cr22}}{%endif%}{% if s3 == t5_2 %}Classroom {{cr32}}{%endif%}{% if s3 == t6_2 %}Classroom {{cr32}}{%endif%}{% if s3 == t7_2 %}Classroom {{cr42}}{%endif%}{% if s3 == t8_2 %}Classroom {{cr42}}{%endif%}{% if s3 == t9_2 %}Classroom {{cr52}}{%endif%}{% if s3 == t10_2 %}Classroom {{cr52}}{%endif%}{% if s3 == t11_2 %}Classroom {{cr62}}{%endif%}{% if s3 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if s3 == t1_3 %}Classroom {{cr13}}{%endif%}{% if s3 == t2_3 %}Classroom {{cr13}}{%endif%}{% if s3 == t3_3 %}Classroom {{cr23}}{%endif%}{% if s3 == t4_3 %}Classroom {{cr23}}{%endif%}{% if s3 == t5_3 %}Classroom {{cr33}}{%endif%}{% if s3 == t6_3 %}Classroom {{cr33}}{%endif%}{% if s3 == t7_3 %}Classroom {{cr43}}{%endif%}{% if s3 == t8_3 %}Classroom {{cr43}}{%endif%}{% if s3 == t9_3 %}Classroom {{cr53}}{%endif%}{% if s3 == t10_3 %}Classroom {{cr53}}{%endif%}{% if s3 == t11_3 %}Classroom {{cr63}}{%endif%}{% if s3 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if s3 == t1_4 %}Classroom {{cr14}}{%endif%}{% if s3 == t2_4 %}Classroom {{cr14}}{%endif%}{% if s3 == t3_4 %}Classroom {{cr24}}{%endif%}{% if s3 == t4_4 %}Classroom {{cr24}}{%endif%}{% if s3 == t5_4 %}Classroom {{cr34}}{%endif%}{% if s3 == t6_4 %}Classroom {{cr34}}{%endif%}{% if s3 == t7_4 %}Classroom {{cr44}}{%endif%}{% if s3 == t8_4 %}Classroom {{cr44}}{%endif%}{% if s3 == t9_4 %}Classroom {{cr54}}{%endif%}{% if s3 == t10_4 %}Classroom {{cr54}}{%endif%}{% if s3 == t11_4 %}Classroom {{cr64}}{%endif%}{% if s3 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if s3 == t1_5 %}Classroom {{cr15}}{%endif%}{% if s3 == t2_5 %}Classroom {{cr15}}{%endif%}{% if s3 == t3_5 %}Classroom {{cr25}}{%endif%}{% if s3 == t4_5 %}Classroom {{cr25}}{%endif%}{% if s3 == t5_5 %}Classroom {{cr35}}{%endif%}{% if s3 == t6_5 %}Classroom {{cr35}}{%endif%}{% if s3 == t7_5 %}Classroom {{cr45}}{%endif%}{% if s3 == t8_5 %}Classroom {{cr45}}{%endif%}{% if s3 == t9_5 %}Classroom {{cr55}}{%endif%}{% if s3 == t10_5 %}Classroom {{cr55}}{%endif%}{% if s3 == t11_5 %}Classroom {{cr65}}{%endif%}{% if s3 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if s3 == t1_6 %}Classroom {{cr16}}{%endif%}{% if s3 == t2_6 %}Classroom {{cr16}}{%endif%}{% if s3 == t3_6 %}Classroom {{cr26}}{%endif%}{% if s3 == t4_6 %}Classroom {{cr26}}{%endif%}{% if s3 == t5_6 %}Classroom {{cr36}}{%endif%}{% if s3 == t6_6 %}Classroom {{cr36}}{%endif%}{% if s3 == t7_6 %}Classroom {{cr46}}{%endif%}{% if s3 == t8_6 %}Classroom {{cr46}}{%endif%}{% if s3 == t9_6 %}Classroom {{cr56}}{%endif%}{% if s3 == t10_6 %}Classroom {{cr56}}{%endif%}{% if s3 == t11_6 %}Classroom {{cr66}}{%endif%}{% if s3 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{s4}}</td>
+    <td>{% if s4 == t1 %}Classroom {{cr1}}{%endif%}{% if s4 == t2 %}Classroom {{cr1}}{%endif%}{% if s4 == t3 %}Classroom {{cr2}}{%endif%}{% if s4 == t4 %}Classroom {{cr2}}{%endif%}{% if s4 == t5 %}Classroom {{cr3}}{%endif%}{% if s4 == t6 %}Classroom {{cr3}}{%endif%}{% if s4 == t7 %}Classroom {{cr4}}{%endif%}{% if s4 == t8 %}Classroom {{cr4}}{%endif%}{% if s4 == t9 %}Classroom {{cr5}}{%endif%}{% if s4 == t10 %}Classroom {{cr5}}{%endif%}{% if s4 == t11 %}Classroom {{cr6}}{%endif%}{% if s4 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if s4 == t1_2 %}Classroom {{cr12}}{%endif%}{% if s4 == t2_2 %}Classroom {{cr12}}{%endif%}{% if s4 == t3_2 %}Classroom {{cr22}}{%endif%}{% if s4 == t4_2 %}Classroom {{cr22}}{%endif%}{% if s4 == t5_2 %}Classroom {{cr32}}{%endif%}{% if s4 == t6_2 %}Classroom {{cr32}}{%endif%}{% if s4 == t7_2 %}Classroom {{cr42}}{%endif%}{% if s4 == t8_2 %}Classroom {{cr42}}{%endif%}{% if s4 == t9_2 %}Classroom {{cr52}}{%endif%}{% if s4 == t10_2 %}Classroom {{cr52}}{%endif%}{% if s4 == t11_2 %}Classroom {{cr62}}{%endif%}{% if s4 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if s4 == t1_3 %}Classroom {{cr13}}{%endif%}{% if s4 == t2_3 %}Classroom {{cr13}}{%endif%}{% if s4 == t3_3 %}Classroom {{cr23}}{%endif%}{% if s4 == t4_3 %}Classroom {{cr23}}{%endif%}{% if s4 == t5_3 %}Classroom {{cr33}}{%endif%}{% if s4 == t6_3 %}Classroom {{cr33}}{%endif%}{% if s4 == t7_3 %}Classroom {{cr43}}{%endif%}{% if s4 == t8_3 %}Classroom {{cr43}}{%endif%}{% if s4 == t9_3 %}Classroom {{cr53}}{%endif%}{% if s4 == t10_3 %}Classroom {{cr53}}{%endif%}{% if s4 == t11_3 %}Classroom {{cr63}}{%endif%}{% if s4 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if s4 == t1_4 %}Classroom {{cr14}}{%endif%}{% if s4 == t2_4 %}Classroom {{cr14}}{%endif%}{% if s4 == t3_4 %}Classroom {{cr24}}{%endif%}{% if s4 == t4_4 %}Classroom {{cr24}}{%endif%}{% if s4 == t5_4 %}Classroom {{cr34}}{%endif%}{% if s4 == t6_4 %}Classroom {{cr34}}{%endif%}{% if s4 == t7_4 %}Classroom {{cr44}}{%endif%}{% if s4 == t8_4 %}Classroom {{cr44}}{%endif%}{% if s4 == t9_4 %}Classroom {{cr54}}{%endif%}{% if s4 == t10_4 %}Classroom {{cr54}}{%endif%}{% if s4 == t11_4 %}Classroom {{cr64}}{%endif%}{% if s4 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if s4 == t1_5 %}Classroom {{cr15}}{%endif%}{% if s4 == t2_5 %}Classroom {{cr15}}{%endif%}{% if s4 == t3_5 %}Classroom {{cr25}}{%endif%}{% if s4 == t4_5 %}Classroom {{cr25}}{%endif%}{% if s4 == t5_5 %}Classroom {{cr35}}{%endif%}{% if s4 == t6_5 %}Classroom {{cr35}}{%endif%}{% if s4 == t7_5 %}Classroom {{cr45}}{%endif%}{% if s4 == t8_5 %}Classroom {{cr45}}{%endif%}{% if s4 == t9_5 %}Classroom {{cr55}}{%endif%}{% if s4 == t10_5 %}Classroom {{cr55}}{%endif%}{% if s4 == t11_5 %}Classroom {{cr65}}{%endif%}{% if s4 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if s4 == t1_6 %}Classroom {{cr16}}{%endif%}{% if s4 == t2_6 %}Classroom {{cr16}}{%endif%}{% if s4 == t3_6 %}Classroom {{cr26}}{%endif%}{% if s4 == t4_6 %}Classroom {{cr26}}{%endif%}{% if s4 == t5_6 %}Classroom {{cr36}}{%endif%}{% if s4 == t6_6 %}Classroom {{cr36}}{%endif%}{% if s4 == t7_6 %}Classroom {{cr46}}{%endif%}{% if s4 == t8_6 %}Classroom {{cr46}}{%endif%}{% if s4 == t9_6 %}Classroom {{cr56}}{%endif%}{% if s4 == t10_6 %}Classroom {{cr56}}{%endif%}{% if s4 == t11_6 %}Classroom {{cr66}}{%endif%}{% if s4 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{s5}}</td>
+    <td>{% if s5 == t1 %}Classroom {{cr1}}{%endif%}{% if s5 == t2 %}Classroom {{cr1}}{%endif%}{% if s5 == t3 %}Classroom {{cr2}}{%endif%}{% if s5 == t4 %}Classroom {{cr2}}{%endif%}{% if s5 == t5 %}Classroom {{cr3}}{%endif%}{% if s5 == t6 %}Classroom {{cr3}}{%endif%}{% if s5 == t7 %}Classroom {{cr4}}{%endif%}{% if s5 == t8 %}Classroom {{cr4}}{%endif%}{% if s5 == t9 %}Classroom {{cr5}}{%endif%}{% if s5 == t10 %}Classroom {{cr5}}{%endif%}{% if s5 == t11 %}Classroom {{cr6}}{%endif%}{% if s5 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if s5 == t1_2 %}Classroom {{cr12}}{%endif%}{% if s5 == t2_2 %}Classroom {{cr12}}{%endif%}{% if s5 == t3_2 %}Classroom {{cr22}}{%endif%}{% if s5 == t4_2 %}Classroom {{cr22}}{%endif%}{% if s5 == t5_2 %}Classroom {{cr32}}{%endif%}{% if s5 == t6_2 %}Classroom {{cr32}}{%endif%}{% if s5 == t7_2 %}Classroom {{cr42}}{%endif%}{% if s5 == t8_2 %}Classroom {{cr42}}{%endif%}{% if s5 == t9_2 %}Classroom {{cr52}}{%endif%}{% if s5 == t10_2 %}Classroom {{cr52}}{%endif%}{% if s5 == t11_2 %}Classroom {{cr62}}{%endif%}{% if s5 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if s5 == t1_3 %}Classroom {{cr13}}{%endif%}{% if s5 == t2_3 %}Classroom {{cr13}}{%endif%}{% if s5 == t3_3 %}Classroom {{cr23}}{%endif%}{% if s5 == t4_3 %}Classroom {{cr23}}{%endif%}{% if s5 == t5_3 %}Classroom {{cr33}}{%endif%}{% if s5 == t6_3 %}Classroom {{cr33}}{%endif%}{% if s5 == t7_3 %}Classroom {{cr43}}{%endif%}{% if s5 == t8_3 %}Classroom {{cr43}}{%endif%}{% if s5 == t9_3 %}Classroom {{cr53}}{%endif%}{% if s5 == t10_3 %}Classroom {{cr53}}{%endif%}{% if s5 == t11_3 %}Classroom {{cr63}}{%endif%}{% if s5 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if s5 == t1_4 %}Classroom {{cr14}}{%endif%}{% if s5 == t2_4 %}Classroom {{cr14}}{%endif%}{% if s5 == t3_4 %}Classroom {{cr24}}{%endif%}{% if s5 == t4_4 %}Classroom {{cr24}}{%endif%}{% if s5 == t5_4 %}Classroom {{cr34}}{%endif%}{% if s5 == t6_4 %}Classroom {{cr34}}{%endif%}{% if s5 == t7_4 %}Classroom {{cr44}}{%endif%}{% if s5 == t8_4 %}Classroom {{cr44}}{%endif%}{% if s5 == t9_4 %}Classroom {{cr54}}{%endif%}{% if s5 == t10_4 %}Classroom {{cr54}}{%endif%}{% if s5 == t11_4 %}Classroom {{cr64}}{%endif%}{% if s5 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if s5 == t1_5 %}Classroom {{cr15}}{%endif%}{% if s5 == t2_5 %}Classroom {{cr15}}{%endif%}{% if s5 == t3_5 %}Classroom {{cr25}}{%endif%}{% if s5 == t4_5 %}Classroom {{cr25}}{%endif%}{% if s5 == t5_5 %}Classroom {{cr35}}{%endif%}{% if s5 == t6_5 %}Classroom {{cr35}}{%endif%}{% if s5 == t7_5 %}Classroom {{cr45}}{%endif%}{% if s5 == t8_5 %}Classroom {{cr45}}{%endif%}{% if s5 == t9_5 %}Classroom {{cr55}}{%endif%}{% if s5 == t10_5 %}Classroom {{cr55}}{%endif%}{% if s5 == t11_5 %}Classroom {{cr65}}{%endif%}{% if s5 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if s5 == t1_6 %}Classroom {{cr16}}{%endif%}{% if s5 == t2_6 %}Classroom {{cr16}}{%endif%}{% if s5 == t3_6 %}Classroom {{cr26}}{%endif%}{% if s5 == t4_6 %}Classroom {{cr26}}{%endif%}{% if s5 == t5_6 %}Classroom {{cr36}}{%endif%}{% if s5 == t6_6 %}Classroom {{cr36}}{%endif%}{% if s5 == t7_6 %}Classroom {{cr46}}{%endif%}{% if s5 == t8_6 %}Classroom {{cr46}}{%endif%}{% if s5 == t9_6 %}Classroom {{cr56}}{%endif%}{% if s5 == t10_6 %}Classroom {{cr56}}{%endif%}{% if s5 == t11_6 %}Classroom {{cr66}}{%endif%}{% if s5 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+  <tr>
+    <td>{{s6}}</td>
+    <td>{% if s6 == t1 %}Classroom {{cr1}}{%endif%}{% if s6 == t2 %}Classroom {{cr1}}{%endif%}{% if s6 == t3 %}Classroom {{cr2}}{%endif%}{% if s6 == t4 %}Classroom {{cr2}}{%endif%}{% if s6 == t5 %}Classroom {{cr3}}{%endif%}{% if s6 == t6 %}Classroom {{cr3}}{%endif%}{% if s6 == t7 %}Classroom {{cr4}}{%endif%}{% if s6 == t8 %}Classroom {{cr4}}{%endif%}{% if s6 == t9 %}Classroom {{cr5}}{%endif%}{% if s6 == t10 %}Classroom {{cr5}}{%endif%}{% if s6 == t11 %}Classroom {{cr6}}{%endif%}{% if s6 == t12 %}Classroom {{cr6}}{%endif%}</td>
+    {% if num >= 2 %}<td>{% if s6 == t1_2 %}Classroom {{cr12}}{%endif%}{% if s6 == t2_2 %}Classroom {{cr12}}{%endif%}{% if s6 == t3_2 %}Classroom {{cr22}}{%endif%}{% if s6 == t4_2 %}Classroom {{cr22}}{%endif%}{% if s6 == t5_2 %}Classroom {{cr32}}{%endif%}{% if s6 == t6_2 %}Classroom {{cr32}}{%endif%}{% if s6 == t7_2 %}Classroom {{cr42}}{%endif%}{% if s6 == t8_2 %}Classroom {{cr42}}{%endif%}{% if s6 == t9_2 %}Classroom {{cr52}}{%endif%}{% if s6 == t10_2 %}Classroom {{cr52}}{%endif%}{% if s6 == t11_2 %}Classroom {{cr62}}{%endif%}{% if s6 == t12_2 %}Classroom {{cr62}}{%endif%}</td>{%endif%}
+    {% if num >= 3 %}<td>{% if s6 == t1_3 %}Classroom {{cr13}}{%endif%}{% if s6 == t2_3 %}Classroom {{cr13}}{%endif%}{% if s6 == t3_3 %}Classroom {{cr23}}{%endif%}{% if s6 == t4_3 %}Classroom {{cr23}}{%endif%}{% if s6 == t5_3 %}Classroom {{cr33}}{%endif%}{% if s6 == t6_3 %}Classroom {{cr33}}{%endif%}{% if s6 == t7_3 %}Classroom {{cr43}}{%endif%}{% if s6 == t8_3 %}Classroom {{cr43}}{%endif%}{% if s6 == t9_3 %}Classroom {{cr53}}{%endif%}{% if s6 == t10_3 %}Classroom {{cr53}}{%endif%}{% if s6 == t11_3 %}Classroom {{cr63}}{%endif%}{% if s6 == t12_3 %}Classroom {{cr63}}{%endif%}</td>{%endif%}
+    {% if num >= 4 %}<td>{% if s6 == t1_4 %}Classroom {{cr14}}{%endif%}{% if s6 == t2_4 %}Classroom {{cr14}}{%endif%}{% if s6 == t3_4 %}Classroom {{cr24}}{%endif%}{% if s6 == t4_4 %}Classroom {{cr24}}{%endif%}{% if s6 == t5_4 %}Classroom {{cr34}}{%endif%}{% if s6 == t6_4 %}Classroom {{cr34}}{%endif%}{% if s6 == t7_4 %}Classroom {{cr44}}{%endif%}{% if s6 == t8_4 %}Classroom {{cr44}}{%endif%}{% if s6 == t9_4 %}Classroom {{cr54}}{%endif%}{% if s6 == t10_4 %}Classroom {{cr54}}{%endif%}{% if s6 == t11_4 %}Classroom {{cr64}}{%endif%}{% if s6 == t12_4 %}Classroom {{cr64}}{%endif%}</td>{%endif%}
+    {% if num >= 5 %}<td>{% if s6 == t1_5 %}Classroom {{cr15}}{%endif%}{% if s6 == t2_5 %}Classroom {{cr15}}{%endif%}{% if s6 == t3_5 %}Classroom {{cr25}}{%endif%}{% if s6 == t4_5 %}Classroom {{cr25}}{%endif%}{% if s6 == t5_5 %}Classroom {{cr35}}{%endif%}{% if s6 == t6_5 %}Classroom {{cr35}}{%endif%}{% if s6 == t7_5 %}Classroom {{cr45}}{%endif%}{% if s6 == t8_5 %}Classroom {{cr45}}{%endif%}{% if s6 == t9_5 %}Classroom {{cr55}}{%endif%}{% if s6 == t10_5 %}Classroom {{cr55}}{%endif%}{% if s6 == t11_5 %}Classroom {{cr65}}{%endif%}{% if s6 == t12_5 %}Classroom {{cr65}}{%endif%}</td>{%endif%}
+    {% if num >= 6 %}<td>{% if s6 == t1_6 %}Classroom {{cr16}}{%endif%}{% if s6 == t2_6 %}Classroom {{cr16}}{%endif%}{% if s6 == t3_6 %}Classroom {{cr26}}{%endif%}{% if s6 == t4_6 %}Classroom {{cr26}}{%endif%}{% if s6 == t5_6 %}Classroom {{cr36}}{%endif%}{% if s6 == t6_6 %}Classroom {{cr36}}{%endif%}{% if s6 == t7_6 %}Classroom {{cr46}}{%endif%}{% if s6 == t8_6 %}Classroom {{cr46}}{%endif%}{% if s6 == t9_6 %}Classroom {{cr56}}{%endif%}{% if s6 == t10_6 %}Classroom {{cr56}}{%endif%}{% if s6 == t11_6 %}Classroom {{cr66}}{%endif%}{% if s6 == t12_6 %}Classroom {{cr66}}{%endif%}</td>{%endif%}
+  </tr>
+</tbody>
+</table>
+<br><br>
+<h2>Teacher's Attendance </h2>
+<table class="tg" align=center style="text-align:center" style="undefined;table-layout: fixed;width: 698px">
+<colgroup>
+  <col style="width: 420px">
+  <col style="width: 300px">
+</colgroup>
+<thead>
+<tr>
+  <th><h2>Teachers Name</h2></th>
+  <th><h2>Signature</h2></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>{{m1}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{m2}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{m3}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{m4}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{m5}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{m6}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{m7}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{m8}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{m9}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{m10}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{m11}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{m12}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{s1}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{s2}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{s3}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{s4}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{s5}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>{{s6}}</td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+
 </div>
 <br>
 
